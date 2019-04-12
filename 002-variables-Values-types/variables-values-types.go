@@ -143,7 +143,7 @@ func type_conversion() {
     fmt.Printf("Lets type convert variable2 and assign it to variable1...");
     fmt.Printf("The value of variable2 is %d and its type is %T\n", int(variable2), int(variable2));
     variable1 = int(variable2)
-    fmt.Println("After Conversioni");
+    fmt.Println("After Conversions");
     fmt.Printf("The value of variable1 is %d and its type is %T\n", int(variable1), int(variable1));
     fmt.Printf("The value of variable2 is %d and its type is %T\n", int(variable2), int(variable2));
 
