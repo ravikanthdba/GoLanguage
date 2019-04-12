@@ -12,12 +12,13 @@ Then it hits the closed parenthesis of the main function. This is when the code 
 Hence, the code would end here.
 */
 
-package main // Compulsory
+package main // 	Compulsory
 
 import "fmt"
 
 func main() {
-	fmt.Println("GoLanguage is Fun!!")
+	n, _ := fmt.Println("GoLanguage is Fun!!")
+	fmt.Println("The number of bytes are ", n);
 	foo()
 	fmt.Println("Printing in next line")
 
