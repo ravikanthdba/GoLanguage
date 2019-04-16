@@ -52,9 +52,9 @@ var decimal float32
 
 const (
     	_ = iota
-    	KB = iota
-    	// MB = iota
-    	// GB = iota
+    	kb = 1 << (iota * 10)
+    	mb = 1 << (iota * 10)
+        gb = 1 << (iota * 10)
     )
 
 func main() {
@@ -205,19 +205,11 @@ func main() {
     fmt.Printf("After four right shifting to the number - %d  the binary is  %b\n", right_shift, right_shift);
 
 
-
-    var kb int = 1024;
-    mb := 1024 * kb;
-    gb := 1024 * mb;
-
     fmt.Printf("The binary for %d is %b\n", kb, kb);
     fmt.Printf("The binary for %d is %b\n", mb, mb);
     fmt.Printf("The binary for %d is %b\n", gb, gb);
 
 
-
-
-    fmt.Printf("The values are %b %b and %b\n", KB << 10, KB << 20, KB << 30);
     // fmt.Printf("The values are %b %b and %b\n", KB << 10, MB << 20, GB << 30);
 
     var year int;
