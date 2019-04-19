@@ -1,0 +1,32 @@
+/*
+
+Using the code from the previous example, add a record to your map. Now print the map out using the “range” loop
+
+*/
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	m := map[string] [3]string {
+		`bond_james`: {`Shaken, not stirred`, `Martinis`, `Women`},
+		`moneypenny_miss`: {`James Bond`, `Literature`, `Computer Science`},
+		`no_dr`: {`Being evil`, `Ice cream`, `Sunsets`},
+	}
+
+
+	// Add a record to the map
+	m[`ravikanth`] = [3]string {`Watching movies`, `programming`, `reading`};
+
+
+	fmt.Printf("%s           -  %s\n", "name", "favourite");
+	for mapkeys := range m {
+		for favourite := 0; favourite < len(m[mapkeys]); favourite ++ {
+			fmt.Printf("%s           -  %s\n", mapkeys, m[mapkeys][favourite]);
+		}
+	}
+}

@@ -44,6 +44,7 @@ func main() {
 
 
 	// Example 2 - Example of Nested Loop
+	fmt.Println("\n\n")
 	fmt.Println("Example 2 - Example of Nested Loop")
 	for i := 0; i <= 10; i ++ {
 		for j := 0; j <= i; j++ {
@@ -54,6 +55,7 @@ func main() {
 
 
 	// Example 3 - Example of Nested Loop
+	fmt.Println("\n\n")
 	fmt.Println("Example 3 - Example of Nested Loop")
 	for i := 0; i <= 10; i ++ {
 		fmt.Printf("The Outer Loop is %d:\n", i);
@@ -65,6 +67,7 @@ func main() {
 
 
 	// Example 4 - This is similar to a while loop
+	fmt.Println("\n\n")
 	fmt.Println("Example 4 - This is similar to a while loop")
 	x := 1;
 	for x < 10 {
@@ -76,6 +79,7 @@ func main() {
 
 
 	// Example 5 - for with and if example
+	fmt.Println("\n\n")
 	fmt.Println("Example 5 - for with and if example")
     i := 0;
 	for {
@@ -89,6 +93,7 @@ func main() {
 
 
 	// Example 6 - break and continue in action
+	fmt.Println("\n\n")
 	fmt.Println("Example 6 - break and continue in action - Print Even numbers")
 	number := 0;
 	for {
@@ -104,6 +109,7 @@ func main() {
 	}
 
 	// Example 7 - Print ASCII characters for the first 200 numbers
+	fmt.Println("\n\n")
 	fmt.Println("Example 7 - Print ASCII characters for the first 200 numbers")
 	for character := 33; character <= 122; character ++ {
 	    fmt.Printf("The ASCII character of %d is %c\n", character, character);
@@ -124,6 +130,7 @@ func main() {
 
        >; <; <=; >=; ==; !=
 	*/ 
+	fmt.Println("\n\n")
 	fmt.Println("Example 8 - Simple If statement")
 	if true {
 		fmt.Println("001");
@@ -164,6 +171,7 @@ func main() {
         Ideal case - Compiler puts ";" after every line, but if you need to print two print statements in one line, then it needs to be explicitly separated by a ";"
         In the below example: fmt.Println("Do Something"); fmt.Println("Do Another thing"); - is being separated by a ";" - so it like two statements
 	*/
+	fmt.Println("\n\n")
 	fmt.Println("Example 9 - Print two statements in one line")
 	if x := 42; x == 42 {
 		fmt.Println(x);
@@ -173,6 +181,7 @@ func main() {
 
 
 	// Example 10 - Example of If-else-If
+	fmt.Println("\n\n")
 	fmt.Println("Example 10 - Example of If-else-If");
 	var integer int;
 	fmt.Println("Enter the integer: ");
@@ -190,6 +199,7 @@ func main() {
 
 
 	// Example 11 - Example of loops,conditions and modulo put together
+	fmt.Println("\n\n")
 	fmt.Println("Example 11 - Example of loops,conditions and modulo put together")
 	for number := 0; number <= integer; number ++ {
 		if number % 4 == 0 && number % 6 == 0 {
@@ -212,6 +222,7 @@ func main() {
 		fallthrough - Ideally, if a switch condition is satisfied, then it prints / executes functions in that block, and exiists, even if another case statement is true. Fallthrough - even after a case statement is true and executed, it moves control to the next step.
 
 	*/
+	fmt.Println("\n\n")
 	fmt.Println("Example 12 - Example of Switch Example")
 
 	for {
@@ -244,6 +255,7 @@ func main() {
 
 
 	/* Example 13 - Example of Fallthrough */
+	fmt.Println("\n\n")
 	fmt.Println("Example 13 - Example of Fallthrough")
 
 	switch {
@@ -260,6 +272,7 @@ func main() {
 
 
 	/* Example 14 - Truth Table */
+	fmt.Println("\n\n")
 	fmt.Println("Example 14 - Truth Table")
 
 
