@@ -5,6 +5,7 @@ import (
 	"runtime"
 )
 
+
 func main() {
 	fmt.Println("The Operating System is      :", runtime.GOOS);
 	fmt.Println("The Architecture is          :", runtime.GOARCH);
