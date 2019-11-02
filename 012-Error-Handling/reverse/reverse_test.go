@@ -1,4 +1,4 @@
-package main
+package myreversefunction
 
 import (
     "testing"
@@ -6,7 +6,7 @@ import (
 
 func TestReverse(t *testing.T) {
     var value string = "Hello";
-    reversed_string := reverse(value);
+    reversed_string := Reverse(value);
 
     if reversed_string != "olleH" {
         t.Error("Expected olleH and got ", reversed_string);
