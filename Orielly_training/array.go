@@ -56,7 +56,7 @@ func main() {
 	fmt.Println("\n")
 
 	// Access using loop
-	for i := 0; i < len(refridgerators); i ++ {
+	for i := 0; i < len(refridgerators); i++ {
 		fmt.Println(refridgerators[i])
 	}
 
@@ -72,7 +72,7 @@ func main() {
 	for _, name := range refridgerators {
 		fmt.Println(name)
 	}
-	
+
 	fmt.Println("\n")
 	for index, _ := range refridgerators {
 		fmt.Println(index)
