@@ -3,33 +3,33 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
-    channel := gen();
-    fmt.Printf("The type of c is %T\n", channel);
-    fmt.Println("The value of c is: ", channel);
-    receive(channel);
-    fmt.Println("Exiting the program now.")
+	channel := gen()
+	fmt.Printf("The type of c is %T\n", channel)
+	fmt.Println("The value of c is: ", channel)
+	receive(channel)
+	fmt.Println("Exiting the program now.")
 }
 
-func receive(c <- chan int) {
-    for value := range c {
-        fmt.Println("The value is now: ", value);
-    }
-    fmt.Println("\n")
+func receive(c <-chan int) {
+	for value := range c {
+		fmt.Println("The value is now: ", value)
+	}
+	fmt.Println("\n")
 }
 
-func gen() <- chan int {
-    c := make(chan int);
+func gen() <-chan int {
+	c := make(chan int)
 
-    go func() {
-        for i := 0; i < 100; i ++ {
-            c <- i;
-        }
-        close(c);
-    }()
+	go func() {
+		for i := 0; i < 100; i++ {
+			c <- i
+		}
+		close(c)
+	}()
 
-    return c;
+	return c
 }

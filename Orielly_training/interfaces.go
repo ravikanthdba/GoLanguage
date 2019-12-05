@@ -32,14 +32,12 @@ func (t TapeRecorder) stop() {
 	fmt.Println("Tape Recorder stopped")
 }
 
-
 func playList(device TapePlayer, songs []string) {
 	for _, song := range songs {
 		device.start(song)
 	}
 	device.stop()
 }
-
 
 type Player interface {
 	start(song string)
@@ -66,7 +64,7 @@ func main() {
 	PlayListInterface(tapePlayer, mixSongs)
 
 	var tapeRecorder TapeRecorder
-	PlayListInterface(tapeRecorder, mixSongs)	
+	PlayListInterface(tapeRecorder, mixSongs)
 
 	// Exercise: https://play.golang.org/p/6OWXZ-686kO
 }

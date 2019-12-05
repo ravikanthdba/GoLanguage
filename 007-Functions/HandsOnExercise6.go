@@ -1,6 +1,6 @@
 /*
 
-Build and use an anonymous func 
+Build and use an anonymous func
 
 */
 
@@ -12,10 +12,10 @@ import (
 
 func main() {
 
-	var x int = 50;
+	var x int = 50
 
 	func(variable int) {
-		fmt.Println("The value of x is ", variable);
+		fmt.Println("The value of x is ", variable)
 	}(x)
 
 	func() {

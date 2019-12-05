@@ -1,12 +1,12 @@
 /*
-    Start with https://play.golang.org/p/3W69TH4nON - Instead of using the blank identifier, make sure the code is checking and handling the error.
+   Start with https://play.golang.org/p/3W69TH4nON - Instead of using the blank identifier, make sure the code is checking and handling the error.
 */
 
 package main
 
 import (
-    "fmt"
-    "encoding/json"
+	"encoding/json"
+	"fmt"
 )
 
 type person struct {
@@ -24,7 +24,7 @@ func main() {
 
 	bs, err := json.Marshal(p1) // replaced "_" with err and error being handled in the next 3 lines
 	if err != nil {
-		fmt.Println(err);
+		fmt.Println(err)
 	}
 	fmt.Println(string(bs))
 

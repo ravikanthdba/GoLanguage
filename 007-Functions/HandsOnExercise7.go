@@ -13,8 +13,8 @@ import (
 func main() {
 
 	x := func() {
-		fmt.Println("This is an anonymous function assiigned to a variable x");
+		fmt.Println("This is an anonymous function assiigned to a variable x")
 	}
 
-	x();
+	x()
 }

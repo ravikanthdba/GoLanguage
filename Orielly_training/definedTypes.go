@@ -7,7 +7,6 @@ import (
 type Gallons float64
 type Litres float64
 
-
 func main() {
 	var carFuel Gallons
 	var busFuel Litres

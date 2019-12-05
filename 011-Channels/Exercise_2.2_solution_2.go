@@ -1,22 +1,22 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
-    c := make(chan int);
+	c := make(chan int)
 
-    go send(c);
-    go receive(c);
+	go send(c)
+	go receive(c)
 
-    fmt.Println("Program ended..");
+	fmt.Println("Program ended..")
 }
 
-func send(c chan <- int) {
-    c <- 99;
+func send(c chan<- int) {
+	c <- 99
 }
 
-func receive(c <- chan int) {
-    fmt.Println(<-c);
+func receive(c <-chan int) {
+	fmt.Println(<-c)
 }

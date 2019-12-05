@@ -21,52 +21,50 @@ Now - we change the value of *b to 99, which means that the data in the address 
 package main
 
 import (
-
-    "fmt"
+	"fmt"
 )
 
 func main() {
 
-    var x int = 43;
-    fmt.Println("The value of x is ", x);
-    fmt.Println("The address at which x is stored is ", &x);
+	var x int = 43
+	fmt.Println("The value of x is ", x)
+	fmt.Println("The address at which x is stored is ", &x)
 
-    fmt.Println("\n\n");
+	fmt.Println("\n\n")
 
-    var y string = "Hello";
-    fmt.Println("The value of y is ", y);
-    fmt.Println("The address at which y is stored is", &y);
+	var y string = "Hello"
+	fmt.Println("The value of y is ", y)
+	fmt.Println("The address at which y is stored is", &y)
 
-    fmt.Println("\n\n");
+	fmt.Println("\n\n")
 
-    fmt.Printf("The type of variable x is %T\n", x)
-    fmt.Printf("The type of variable y is %T\n", y)
+	fmt.Printf("The type of variable x is %T\n", x)
+	fmt.Printf("The type of variable y is %T\n", y)
 
-    fmt.Println("\n\n");
+	fmt.Println("\n\n")
 
-    fmt.Printf("The type of variable address of x is %T\n", &x)
-    fmt.Printf("The type of variable address of y is %T\n", &y)
+	fmt.Printf("The type of variable address of x is %T\n", &x)
+	fmt.Printf("The type of variable address of y is %T\n", &y)
 
+	fmt.Println("\n\n")
 
-    fmt.Println("\n\n");
+	b := &x
+	fmt.Println("The value of b is", b)
+	fmt.Println("The value at address of b is ", *b)
+	fmt.Printf("The value of type of b is %T\n", b)
+	fmt.Printf("The value of type of *b is %T\n", *b)
 
-    b := &x;
-    fmt.Println("The value of b is", b);
-    fmt.Println("The value at address of b is ", *b);
-    fmt.Printf("The value of type of b is %T\n", b);
-    fmt.Printf("The value of type of *b is %T\n", *b);
+	fmt.Println("\n\n")
 
-    fmt.Println("\n\n");
-
-    *b = 99;
-    fmt.Println("The value of b is", b);
-    fmt.Println("The value of *b is ", *b);
-    fmt.Println("The value of &b is ", &b);
-    fmt.Println("The value of *&b is ", *&b);
-    fmt.Println("\n");
-    fmt.Println("the value of x is ", x);
-    fmt.Println("the value of &x is ", &x);
-    // fmt.Println("the value of *x is ", *x);
-    fmt.Println("the value of *&x is ", *&x);
+	*b = 99
+	fmt.Println("The value of b is", b)
+	fmt.Println("The value of *b is ", *b)
+	fmt.Println("The value of &b is ", &b)
+	fmt.Println("The value of *&b is ", *&b)
+	fmt.Println("\n")
+	fmt.Println("the value of x is ", x)
+	fmt.Println("the value of &x is ", &x)
+	// fmt.Println("the value of *x is ", *x);
+	fmt.Println("the value of *&x is ", *&x)
 
 }

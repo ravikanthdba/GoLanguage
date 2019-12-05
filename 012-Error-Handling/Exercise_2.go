@@ -1,5 +1,5 @@
 /*
-    Start with https://play.golang.org/p/9a1IAWy5E6 Create a custom error message using “fmt.Errorf”.
+   Start with https://play.golang.org/p/9a1IAWy5E6 Create a custom error message using “fmt.Errorf”.
 */
 
 package main

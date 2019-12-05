@@ -8,8 +8,8 @@ func kangaroo(x1 int32, v1 int32, x2 int32, v2 int32) string {
 	var n int = 10000
 	var counter int = 0
 
-	for (counter < n) {
-		if (x1 != x2 ) {
+	for counter < n {
+		if x1 != x2 {
 			x1 += v1
 			x2 += v2
 		} else {
@@ -17,7 +17,7 @@ func kangaroo(x1 int32, v1 int32, x2 int32, v2 int32) string {
 		}
 		counter += 1
 	}
-    return "NO"
+	return "NO"
 }
 
 func main() {

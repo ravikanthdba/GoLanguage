@@ -1,28 +1,27 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 type custErr struct {
-    first string
-    last string
+	first string
+	last  string
 }
 
 func (cust custErr) Error() string {
-    return fmt.Sprintf("Error for the name: %v and %v", cust.first, cust.last);
+	return fmt.Sprintf("Error for the name: %v and %v", cust.first, cust.last)
 }
 
 func main() {
-    c1 := custErr {
-        first: "Ravikanth", 
-        last: "Garimella",
-    };
+	c1 := custErr{
+		first: "Ravikanth",
+		last:  "Garimella",
+	}
 
-    foo(c1);
+	foo(c1)
 }
 
 func foo(e error) {
-    fmt.Println("Running the function foo: ", e);
+	fmt.Println("Running the function foo: ", e)
 }
-

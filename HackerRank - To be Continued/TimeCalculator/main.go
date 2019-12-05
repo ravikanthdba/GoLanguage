@@ -8,8 +8,8 @@ import (
 
 func timeConversion(s string) string {
 	var hour string
-	getAMorPM := s[len(s) - 2 : len(s)]
-	if (getAMorPM == "PM") { 
+	getAMorPM := s[len(s)-2 : len(s)]
+	if getAMorPM == "PM" {
 		var hourint int64
 		hourint, err := strconv.ParseInt(s[0:2], 10, 64)
 		if err != nil {

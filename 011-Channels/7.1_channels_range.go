@@ -15,21 +15,21 @@ Hence when we print, its output is: 1, 2, 3, 4, 5
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
-    queue := make(chan int, 5);
+	queue := make(chan int, 5)
 
-    queue <- 1;
-    queue <- 2;
-    queue <- 3;
-    queue <- 4;
-    queue <- 5;
+	queue <- 1
+	queue <- 2
+	queue <- 3
+	queue <- 4
+	queue <- 5
 
-    close(queue);
+	close(queue)
 
-    for value := range queue {
-        fmt.Println("Value is: ", value);
-    }
+	for value := range queue {
+		fmt.Println("Value is: ", value)
+	}
 }

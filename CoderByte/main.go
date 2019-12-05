@@ -1,26 +1,25 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
 	"encoding/xml"
+	"fmt"
+	"io/ioutil"
+	"net/http"
 )
 
 type Classify struct {
 	Works []Work `xml:"works>work"`
-} 
-
-type Work struct {
-	Title    string `xml:"title,attr"`
-	Author   string `xml:"author,attr"`
-	Hyr      string `xml:"hyr,attr"`
-	Owi      string `xml:"owi,attr"`
 }
 
+type Work struct {
+	Title  string `xml:"title,attr"`
+	Author string `xml:"author,attr"`
+	Hyr    string `xml:"hyr,attr"`
+	Owi    string `xml:"owi,attr"`
+}
 
 func main() {
-	resp, err := http.Get("http://classify.oclc.org/classify2/Classify?summary=true&title=Huckleberry")		
+	resp, err := http.Get("http://classify.oclc.org/classify2/Classify?summary=true&title=Huckleberry")
 	if err != nil {
 		fmt.Println(err)
 	}

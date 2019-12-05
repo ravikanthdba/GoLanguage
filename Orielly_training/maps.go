@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func status (name string) {
+func status(name string) {
 	marks := make(map[string]int)
 	marks["Alma"] = 10
 	marks["Rohit"] = 90
@@ -14,7 +14,6 @@ func status (name string) {
 		fmt.Println(name + " has passed")
 	}
 }
-
 
 func statusUsingCommaOk(name string) {
 	marks := make(map[string]int)
@@ -27,7 +26,7 @@ func statusUsingCommaOk(name string) {
 	mark, ok = marks[name]
 	if !ok {
 		fmt.Println("No grade has been recorded for the name: ", name)
-	} else if (mark >= 80) {
+	} else if mark >= 80 {
 		fmt.Println(name + " has passed")
 	} else {
 		fmt.Println(name + " has failed")
@@ -54,10 +53,10 @@ func main() {
 
 	var newMap = make(map[string]bool)
 	fmt.Printf("%#v\n", newMap)
-	if (newMap == nil) {
+	if newMap == nil {
 		fmt.Println("Map is empty")
 	} else {
-		fmt.Println("Map is not empty")	
+		fmt.Println("Map is not empty")
 	}
 
 	fmt.Println("\n")
@@ -75,7 +74,6 @@ func main() {
 	var zeroMapString = make(map[string]int)
 	fmt.Println(zeroMapString["nonExistant"])
 
-
 	var zeroMapInt = make(map[int]int)
 	fmt.Println(zeroMapInt[22])
 
@@ -84,7 +82,6 @@ func main() {
 	status("Rohit")
 	// Even after the Carl key is not available in the map, the status still shows as failing, which is wrong. Alternative for this is the "comma ok" operation
 	status("Carl")
-
 
 	fmt.Println("\n")
 	// commaOK operation
@@ -109,7 +106,6 @@ func main() {
 	statusUsingCommaOk("Alma")
 	statusUsingCommaOk("Rohit")
 	statusUsingCommaOk("Carl")
-
 
 	// Map Literal
 	fmt.Println("\n")

@@ -1,11 +1,11 @@
 package summation
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func ExampleSummation() {
-    fmt.Println(Summation(2,3));
-    // Output:
-    // 5
+	fmt.Println(Summation(2, 3))
+	// Output:
+	// 5
 }

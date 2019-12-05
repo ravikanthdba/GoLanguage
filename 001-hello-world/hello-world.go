@@ -18,7 +18,7 @@ import "fmt"
 
 func main() {
 	n, _ := fmt.Println("GoLanguage is Fun!!")
-	fmt.Println("The number of bytes are ", n);
+	fmt.Println("The number of bytes are ", n)
 	foo()
 	fmt.Println("Printing in next line")
 

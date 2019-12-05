@@ -20,10 +20,10 @@ import (
 	"fmt"
 )
 
-const pi = 3.14157;
+const pi = 3.14157
 
 type square struct {
-	length float64
+	length  float64
 	breadth float64
 }
 
@@ -32,35 +32,35 @@ type circle struct {
 }
 
 func (s square) area() {
-	fmt.Println(s.length * s.breadth);
+	fmt.Println(s.length * s.breadth)
 }
 
 func (c circle) area() {
-	fmt.Println(pi * (c.radius * c.radius));
+	fmt.Println(pi * (c.radius * c.radius))
 }
 
 type shape interface {
-	area();
+	area()
 }
 
 func info(s shape) {
 	switch s.(type) {
-		case square:
-			fmt.Println("The shape is square");
-			s.(square).area();
-		case circle:
-			fmt.Println("The shape is circle");
-			s.(circle).area();
+	case square:
+		fmt.Println("The shape is square")
+		s.(square).area()
+	case circle:
+		fmt.Println("The shape is circle")
+		s.(circle).area()
 	}
 }
 
 func main() {
 
-	square1 := square {length: 10.00, 
-					   breadth: 10.00,
-					 }
-    circle1 := circle{radius: 10.00}
+	square1 := square{length: 10.00,
+		breadth: 10.00,
+	}
+	circle1 := circle{radius: 10.00}
 
-    info(square1)
-    info(circle1)
+	info(square1)
+	info(circle1)
 }

@@ -3,21 +3,21 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
-    channel := make(chan int);
+	channel := make(chan int)
 
-    go func() {
-        channel <- 42;
-    }   ()
+	go func() {
+		channel <- 42
+	}()
 
-    value, ok := <- channel;
-    fmt.Println("value: ", value, " and status ok is: ", ok);
+	value, ok := <-channel
+	fmt.Println("value: ", value, " and status ok is: ", ok)
 
-    close(channel);
+	close(channel)
 
-    value, ok = <- channel;
-    fmt.Println("value: ", value, " and status ok is: ", ok);
+	value, ok = <-channel
+	fmt.Println("value: ", value, " and status ok is: ", ok)
 }

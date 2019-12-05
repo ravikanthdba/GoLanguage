@@ -9,13 +9,13 @@ import (
 func main() {
 
 	switch {
-		case true:
-			fmt.Println("Printing it!!");
-		
-		case false:
-			fmt.Println("Not Printing it!!");
+	case true:
+		fmt.Println("Printing it!!")
 
-		default:
-			fmt.Println("Default condition!!");
+	case false:
+		fmt.Println("Not Printing it!!")
+
+	default:
+		fmt.Println("Default condition!!")
 	}
 }

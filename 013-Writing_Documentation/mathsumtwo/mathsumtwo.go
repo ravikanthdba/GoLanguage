@@ -3,11 +3,11 @@
 package mathsumtwo
 
 func MathSumTwo(variables []int) int {
-    var sum int = 0;
+	var sum int = 0
 
-    for values := range variables {
-        sum += variables[values];
-    }
+	for values := range variables {
+		sum += variables[values]
+	}
 
-    return sum
+	return sum
 }

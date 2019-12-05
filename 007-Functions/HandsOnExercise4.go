@@ -1,6 +1,6 @@
 /*
 
-Create a user defined struct with 
+Create a user defined struct with
 the identifier “person”
 the fields:
 first
@@ -22,23 +22,23 @@ import (
 
 type person struct {
 	first_name string
-	last_name string
-	age int
+	last_name  string
+	age        int
 }
 
 func (p person) speak() string {
-	 return "My name is " + p.first_name +" "+ p.last_name;
+	return "My name is " + p.first_name + " " + p.last_name
 }
 
 func main() {
 
-	p1 := person {
+	p1 := person{
 		first_name: "Ravikanth",
-		last_name: "Garimella",
-		age: 32,
+		last_name:  "Garimella",
+		age:        32,
 	}
 
-	fmt.Println(p1);
+	fmt.Println(p1)
 	name := p1.speak()
 	fmt.Println(name)
 }

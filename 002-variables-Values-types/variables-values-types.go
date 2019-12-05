@@ -10,8 +10,7 @@ Can be assigned with an expression also
 
 */
 
-
-/* 
+/*
 
 Data Types:
 
@@ -56,29 +55,27 @@ These are called Zero Values
 
 */
 
+/*
+   The type of the variable is found out by using the following:
+   fmt.Println("%T\n", variable)
 
-/* 	
-    The type of the variable is found out by using the following:
-    fmt.Println("%T\n", variable)
+   We have declared a variable as Int, we cannot re-assign that variable as String.
 
-    We have declared a variable as Int, we cannot re-assign that variable as String.
+   GoLang is a Static Programming Language, and not a dynamic programming language
 
-    GoLang is a Static Programming Language, and not a dynamic programming language
-
-    String can be declared between:
-    	- double quotes
-    	- back tick
+   String can be declared between:
+   	- double quotes
+   	- back tick
 
 */
-
 
 /*
-    We can create our our own type. Example is as follows
+   We can create our our own type. Example is as follows
 */
 
+type hotdog int
 
-type hotdog int;
-var mytype hotdog;
+var mytype hotdog
 
 func main() {
 
@@ -98,53 +95,48 @@ func main() {
 	print_floats()
 	print_type_of_variable()
 
-
-
 	/*
-    You can convert the type of the variable from one type to another. In the below example, we will be converting a variablee of type hotdog to integer.
+	   You can convert the type of the variable from one type to another. In the below example, we will be converting a variablee of type hotdog to integer.
 	*/
 
 	type_conversion()
 
-
 }
 
 func foo() {
-	fmt.Println("The value of y from foo is :", y);
+	fmt.Println("The value of y from foo is :", y)
 }
 
 func print_z() {
-	fmt.Println("The value of z is: ", z);
+	fmt.Println("The value of z is: ", z)
 }
-
 
 func print_floats() {
-	fmt.Println("The values of x32 and x64 is: ", x64, x32);
+	fmt.Println("The values of x32 and x64 is: ", x64, x32)
 }
 
-
 func print_type_of_variable() {
-	mytype = 10;
-	fmt.Printf("The type of variable y is %T\n", y);
-	fmt.Printf("The type of variable string1 is %T\n", string1);
-	fmt.Printf("The type of variable string2 is %T\n", string2);
-	fmt.Printf("The type of variable string1_anothermethod is %T\n", string1_anothermethod);
-	fmt.Printf("The type of variable string2_anothermethod is %T\n", string2_anothermethod);
-	fmt.Printf("The type of variable string1 is %T\n", mytype);
-	fmt.Printf("The value of mytype is %d\n", mytype);
+	mytype = 10
+	fmt.Printf("The type of variable y is %T\n", y)
+	fmt.Printf("The type of variable string1 is %T\n", string1)
+	fmt.Printf("The type of variable string2 is %T\n", string2)
+	fmt.Printf("The type of variable string1_anothermethod is %T\n", string1_anothermethod)
+	fmt.Printf("The type of variable string2_anothermethod is %T\n", string2_anothermethod)
+	fmt.Printf("The type of variable string1 is %T\n", mytype)
+	fmt.Printf("The value of mytype is %d\n", mytype)
 }
 
 func type_conversion() {
-	var variable1 int = 100;
-	type hotdog int;
-	var variable2 hotdog = 200;
-	fmt.Printf("The value of variable1 is %d and its type is %T\n", variable1, variable1);
-	fmt.Printf("The value of variable2 is %d and its type is %T\n", variable2, variable2);
-    fmt.Printf("Lets type convert variable2 and assign it to variable1...");
-    fmt.Printf("The value of variable2 is %d and its type is %T\n", int(variable2), int(variable2));
-    variable1 = int(variable2)
-    fmt.Println("After Conversions");
-    fmt.Printf("The value of variable1 is %d and its type is %T\n", int(variable1), int(variable1));
-    fmt.Printf("The value of variable2 is %d and its type is %T\n", int(variable2), int(variable2));
+	var variable1 int = 100
+	type hotdog int
+	var variable2 hotdog = 200
+	fmt.Printf("The value of variable1 is %d and its type is %T\n", variable1, variable1)
+	fmt.Printf("The value of variable2 is %d and its type is %T\n", variable2, variable2)
+	fmt.Printf("Lets type convert variable2 and assign it to variable1...")
+	fmt.Printf("The value of variable2 is %d and its type is %T\n", int(variable2), int(variable2))
+	variable1 = int(variable2)
+	fmt.Println("After Conversions")
+	fmt.Printf("The value of variable1 is %d and its type is %T\n", int(variable1), int(variable1))
+	fmt.Printf("The value of variable2 is %d and its type is %T\n", int(variable2), int(variable2))
 
 }

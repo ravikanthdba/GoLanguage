@@ -9,7 +9,7 @@ func printHi() {
 }
 
 func printEvent(number int) {
-	if (number % 2 == 0) {
+	if number%2 == 0 {
 		fmt.Printf("%d is even\n", number)
 	} else {
 		fmt.Printf("%d is odd\n", number)
@@ -17,7 +17,7 @@ func printEvent(number int) {
 }
 
 func sayNtimes(word string, t int) {
-	for i := 0; i < t; i ++ {
+	for i := 0; i < t; i++ {
 		fmt.Printf("%s\n", word)
 	}
 }

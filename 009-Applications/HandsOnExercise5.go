@@ -1,5 +1,5 @@
 /*
-Starting with this code, sort the []user by 
+Starting with this code, sort the []user by
 age
 last
 Also sort each []string “Sayings” for each user
@@ -20,32 +20,32 @@ type user struct {
 	Sayings []string
 }
 
-type byAge []user;
+type byAge []user
 
 func (u byAge) Len() int {
-	return len(u);
+	return len(u)
 }
 
-func (u byAge) Swap (i, j int) {
-	u[i], u[j] = u[j], u[i];
+func (u byAge) Swap(i, j int) {
+	u[i], u[j] = u[j], u[i]
 }
 
-func (u byAge) Less (i, j int) bool {
-	return u[i].Age < u[j].Age;
+func (u byAge) Less(i, j int) bool {
+	return u[i].Age < u[j].Age
 }
 
-type byString []user;
+type byString []user
 
 func (u byString) Len() int {
-	return len(u);
+	return len(u)
 }
 
-func (u byString) Swap (i, j int) {
-	u[i], u[j] = u[j], u[i];
+func (u byString) Swap(i, j int) {
+	u[i], u[j] = u[j], u[i]
 }
 
-func (u byString) Less (i, j int) bool {
-	return u[i].Last < u[j].Last;
+func (u byString) Less(i, j int) bool {
+	return u[i].Last < u[j].Last
 }
 
 func main() {
@@ -81,54 +81,53 @@ func main() {
 			"Can someone please tell me where James Bond is?",
 		},
 	}
-  
+
 	fmt.Println("-------- Sort by Age -----------")
 	usersByAge := []user{u1, u2, u3}
 
-	fmt.Println("Unsorted");
+	fmt.Println("Unsorted")
 	for _, value := range usersByAge {
-		fmt.Printf("First   :%s\n", value.First);
-		fmt.Printf("Last    :%s\n", value.Last);
-		fmt.Printf("Age     :%d\n", value.Age);
-		fmt.Printf("Sayings :%s\n", value.Sayings);
+		fmt.Printf("First   :%s\n", value.First)
+		fmt.Printf("Last    :%s\n", value.Last)
+		fmt.Printf("Age     :%d\n", value.Age)
+		fmt.Printf("Sayings :%s\n", value.Sayings)
 		fmt.Println("\n\n")
 	}
 	fmt.Println("\n\n")
-	sort.Sort(byString(usersByAge));
-	fmt.Println("Sorted");
+	sort.Sort(byString(usersByAge))
+	fmt.Println("Sorted")
 	for _, value := range usersByAge {
-		fmt.Printf("First   :%s\n", value.First);
-		fmt.Printf("Last    :%s\n", value.Last);
-		fmt.Printf("Age     :%d\n", value.Age);
-		fmt.Printf("Sayings :%s\n", value.Sayings);
+		fmt.Printf("First   :%s\n", value.First)
+		fmt.Printf("Last    :%s\n", value.Last)
+		fmt.Printf("Age     :%d\n", value.Age)
+		fmt.Printf("Sayings :%s\n", value.Sayings)
 		fmt.Println("\n\n")
 	}
-
 
 	fmt.Println("-------- Sort by Last Name -----------")
 
 	usersByString := []user{u1, u2, u3}
 
-	fmt.Println("Unsorted");
+	fmt.Println("Unsorted")
 	for _, value := range usersByString {
-		fmt.Printf("First   :%s\n", value.First);
-		fmt.Printf("Last    :%s\n", value.Last);
-		fmt.Printf("Age     :%d\n", value.Age);
-		fmt.Printf("Sayings :%s\n", value.Sayings);
+		fmt.Printf("First   :%s\n", value.First)
+		fmt.Printf("Last    :%s\n", value.Last)
+		fmt.Printf("Age     :%d\n", value.Age)
+		fmt.Printf("Sayings :%s\n", value.Sayings)
 		fmt.Println("\n\n")
 	}
 	fmt.Println("\n\n")
-	sort.Sort(byString(usersByString));
-	fmt.Println("Sorted");
+	sort.Sort(byString(usersByString))
+	fmt.Println("Sorted")
 	for _, value := range usersByString {
-		fmt.Printf("First   :%s\n", value.First);
-		fmt.Printf("Last    :%s\n", value.Last);
-		fmt.Printf("Age     :%d\n", value.Age);
-		fmt.Printf("Sayings :%s\n", value.Sayings);
+		fmt.Printf("First   :%s\n", value.First)
+		fmt.Printf("Last    :%s\n", value.Last)
+		fmt.Printf("Age     :%d\n", value.Age)
+		fmt.Printf("Sayings :%s\n", value.Sayings)
 		fmt.Println("\n\n")
 	}
 
-	fmt.Println("-------- Sort by Sayings -----------");
+	fmt.Println("-------- Sort by Sayings -----------")
 
 	usersBySayings := []user{u1, u2, u3}
 	for _, value := range usersBySayings {

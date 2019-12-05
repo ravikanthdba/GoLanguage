@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 	"log"
+	"strconv"
 )
 
 func parseBools(values []string) ([]bool, error) {
-	var bools[] bool
+	var bools []bool
 	for i, value := range values {
 		parsed, err := strconv.ParseBool(value)
 		if err != nil {
@@ -25,5 +25,5 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(x)
-	
+
 }

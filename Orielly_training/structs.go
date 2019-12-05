@@ -5,28 +5,26 @@ import (
 )
 
 type bucket struct {
-	number int
+	number  int
 	decimal float64
-	toggle bool
-	name string
+	toggle  bool
+	name    string
 }
-
 
 // Embedded structs - struct within a struct
 
 type Coordinates struct {
-	Latitudes float64
+	Latitudes  float64
 	Longitudes float64
 }
 
 type Landmark struct {
 	Name string
-	/* 
-	An Anonymous field, and has no name. It's just a type
+	/*
+		An Anonymous field, and has no name. It's just a type
 	*/
 	Coordinates
 }
-
 
 func main() {
 	// Include all type of variables into one bucket
@@ -39,7 +37,6 @@ func main() {
 	buck.name = "Ravikanth"
 
 	fmt.Println(buck)
-
 
 	var l Landmark
 	l.Name = "The GooglePlex"

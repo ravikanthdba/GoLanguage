@@ -3,11 +3,11 @@
 package myreversefunction
 
 func Reverse(s string) string {
-    var reversed_string string = "";
+	var reversed_string string = ""
 
-    for str := len(s) - 1; str >= 0; str -- {
-        reversed_string += string(s[str]);
-    }
+	for str := len(s) - 1; str >= 0; str-- {
+		reversed_string += string(s[str])
+	}
 
-    return reversed_string;
+	return reversed_string
 }

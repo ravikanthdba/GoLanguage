@@ -12,21 +12,19 @@ import (
 
 func main() {
 
-	m := map[string] [3]string {
-		`bond_james`: {`Shaken, not stirred`, `Martinis`, `Women`},
+	m := map[string][3]string{
+		`bond_james`:      {`Shaken, not stirred`, `Martinis`, `Women`},
 		`moneypenny_miss`: {`James Bond`, `Literature`, `Computer Science`},
-		`no_dr`: {`Being evil`, `Ice cream`, `Sunsets`},
+		`no_dr`:           {`Being evil`, `Ice cream`, `Sunsets`},
 	}
 
-
 	// Add a record to the map
-	m[`ravikanth`] = [3]string {`Watching movies`, `programming`, `reading`};
+	m[`ravikanth`] = [3]string{`Watching movies`, `programming`, `reading`}
 
-
-	fmt.Printf("%s           -  %s\n", "name", "favourite");
+	fmt.Printf("%s           -  %s\n", "name", "favourite")
 	for mapkeys := range m {
-		for favourite := 0; favourite < len(m[mapkeys]); favourite ++ {
-			fmt.Printf("%s           -  %s\n", mapkeys, m[mapkeys][favourite]);
+		for favourite := 0; favourite < len(m[mapkeys]); favourite++ {
+			fmt.Printf("%s           -  %s\n", mapkeys, m[mapkeys][favourite])
 		}
 	}
 }

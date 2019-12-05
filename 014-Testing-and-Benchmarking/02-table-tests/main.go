@@ -1,25 +1,24 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func summation(variables ...int) int {
-    var sum int = 0;
+	var sum int = 0
 
-    for _, variable := range variables {
-        sum += variable;
-    }
+	for _, variable := range variables {
+		sum += variable
+	}
 
-    return sum
+	return sum
 }
 
 func main() {
-    var numberList = []int{2, 3, 4, 5, 6};
-    fmt.Println(summation(numberList...));
+	var numberList = []int{2, 3, 4, 5, 6}
+	fmt.Println(summation(numberList...))
 
-
-    numberList = []int{2, 3, 4, 5, 6, 10, 11, 12};
-    fmt.Println(summation(numberList...));
+	numberList = []int{2, 3, 4, 5, 6, 10, 11, 12}
+	fmt.Println(summation(numberList...))
 
 }

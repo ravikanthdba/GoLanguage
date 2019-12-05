@@ -13,13 +13,12 @@ package main
 
 import "fmt"
 
-var x int = 42;
-var y string = "James Bond";
-var z bool = true;
-
+var x int = 42
+var y string = "James Bond"
+var z bool = true
 
 func main() {
-	s := fmt.Sprintf("%d %s %t", x, y, z);
-	fmt.Printf("The type of variable s is : %T\n\n", s);
-	fmt.Println("The value of s is ", s);
+	s := fmt.Sprintf("%d %s %t", x, y, z)
+	fmt.Printf("The type of variable s is : %T\n\n", s)
+	fmt.Println("The value of s is ", s)
 }

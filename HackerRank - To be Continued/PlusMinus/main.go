@@ -6,13 +6,13 @@ import (
 
 func plusMinus(arr []int32) {
 	var positive, negative, zero int32 = 0, 0, 0
-	for i := 0; i < len(arr); i ++ {
-		if (arr[i] > 0) {
-			positive ++
-		} else if (arr[i] < 0) {
-			negative ++
+	for i := 0; i < len(arr); i++ {
+		if arr[i] > 0 {
+			positive++
+		} else if arr[i] < 0 {
+			negative++
 		} else {
-			zero ++
+			zero++
 		}
 	}
 	var percentpositive float32 = float32(positive) / float32(len(arr))
@@ -25,6 +25,6 @@ func plusMinus(arr []int32) {
 }
 
 func main() {
-	var arr = []int32 {-4, 3, -9, 0, 4, 1}
+	var arr = []int32{-4, 3, -9, 0, 4, 1}
 	plusMinus(arr)
 }

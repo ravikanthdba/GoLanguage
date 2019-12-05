@@ -5,11 +5,11 @@ import (
 )
 
 func repeat(word string, times int) {
-	for i := 0; i < times; i ++ {
-		fmt.Println(word);
+	for i := 0; i < times; i++ {
+		fmt.Println(word)
 	}
 }
 
 func main() {
-	repeat("Hello", 4);
+	repeat("Hello", 4)
 }

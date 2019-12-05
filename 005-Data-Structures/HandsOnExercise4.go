@@ -1,4 +1,4 @@
-/* 
+/*
 
 Follow these steps:
 start with this slice
@@ -25,12 +25,11 @@ import (
 )
 
 func main() {
-	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51};
+	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
 
 	// append 52 to the list
-	x = append(x, 52);
-	fmt.Println(x);
-
+	x = append(x, 52)
+	fmt.Println(x)
 
 	/*
 		in ONE STATEMENT append to that slice these values
@@ -38,11 +37,10 @@ func main() {
 		54
 		55
 		print out the slice
-	*/ 
+	*/
 
-	x = append(x, 53, 54, 55);
-	fmt.Println(x);
-
+	x = append(x, 53, 54, 55)
+	fmt.Println(x)
 
 	/*
 		append to the slice this slice
@@ -50,8 +48,7 @@ func main() {
 		print out the slice
 	*/
 
-	y := []int{56, 57, 58, 59, 60};
-	x = append(x, y...);
-	fmt.Println(x);
+	y := []int{56, 57, 58, 59, 60}
+	x = append(x, y...)
+	fmt.Println(x)
 }
-

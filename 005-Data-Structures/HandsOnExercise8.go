@@ -10,9 +10,7 @@ Create a map with a key of TYPE string which is a person’s “last_first” na
 
 */
 
-
 package main
-
 
 import (
 	"fmt"
@@ -20,15 +18,15 @@ import (
 
 func main() {
 
-	m := map[string] [3]string {
-		`bond_james`: {`Shaken, not stirred`, `Martinis`, `Women`},
+	m := map[string][3]string{
+		`bond_james`:      {`Shaken, not stirred`, `Martinis`, `Women`},
 		`moneypenny_miss`: {`James Bond`, `Literature`, `Computer Science`},
-		`no_dr`: {`Being evil`, `Ice cream`, `Sunsets`},
+		`no_dr`:           {`Being evil`, `Ice cream`, `Sunsets`},
 	}
 
 	for mapkeys := range m {
-		for favourite := 0; favourite < len(m[mapkeys]); favourite ++ {
-			fmt.Printf("At index position %d for the map %s, the favourite thing is %s\n", favourite, mapkeys,m[mapkeys][favourite]);
+		for favourite := 0; favourite < len(m[mapkeys]); favourite++ {
+			fmt.Printf("At index position %d for the map %s, the favourite thing is %s\n", favourite, mapkeys, m[mapkeys][favourite])
 		}
 	}
 }

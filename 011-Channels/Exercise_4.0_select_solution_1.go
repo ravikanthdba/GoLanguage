@@ -3,37 +3,37 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
-    q := make(chan int);
-    c := gen(q);
-    receive(c, q);
+	q := make(chan int)
+	c := gen(q)
+	receive(c, q)
 }
 
-func gen(q chan <- int) <- chan int {
-    channel := make(chan int);
+func gen(q chan<- int) <-chan int {
+	channel := make(chan int)
 
-    go func() {
-        for i := 0; i < 200; i ++ {
-            channel <- i;
-        }
-        q <- 1;
-        close(channel);
-    }()
+	go func() {
+		for i := 0; i < 200; i++ {
+			channel <- i
+		}
+		q <- 1
+		close(channel)
+	}()
 
-    return channel;
+	return channel
 }
 
-func receive(c, q <- chan int) {
-    for {
-            select {
-                case v := <- c: 
-                    fmt.Println(v);
-                case <-q: 
-                    return;
-                
-            }
-        }
+func receive(c, q <-chan int) {
+	for {
+		select {
+		case v := <-c:
+			fmt.Println(v)
+		case <-q:
+			return
+
+		}
+	}
 }

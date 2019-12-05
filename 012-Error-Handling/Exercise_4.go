@@ -1,4 +1,4 @@
-/* Starting with https://play.golang.org/p/wlEM1tgfQD use the sqrt.Error struct as a value of type error. If you would like, use these numbers for your 
+/* Starting with https://play.golang.org/p/wlEM1tgfQD use the sqrt.Error struct as a value of type error. If you would like, use these numbers for your
 lat "50.2289 N"
 long "99.4656 W" */
 
@@ -28,9 +28,8 @@ func main() {
 
 func sqrt(f float64) (float64, error) {
 	if f < 0 {
-        errorMessage := fmt.Errorf("Error calculating square root for a negative number")
-		return 0, sqrtError {"10.3456", "93.4567", errorMessage};
+		errorMessage := fmt.Errorf("Error calculating square root for a negative number")
+		return 0, sqrtError{"10.3456", "93.4567", errorMessage}
 	}
 	return 42, nil
 }
-

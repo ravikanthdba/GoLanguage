@@ -14,5 +14,5 @@ func UseCount(s string) map[string]int {
 }
 
 func Count(s string) int {
-    return len(strings.Split(s, " "))
+	return len(strings.Split(s, " "))
 }

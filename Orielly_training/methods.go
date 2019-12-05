@@ -13,7 +13,7 @@ func (m myType) sayHello() {
 // Methods for an embedded type also get promoted too
 
 type Coordinates struct {
-	Latitudes float64
+	Latitudes  float64
 	Longitudes float64
 }
 
@@ -35,7 +35,6 @@ func main() {
 	// string1.sayHello()
 	// string2.sayHello()
 
-
 	value1 := myType("Ravikanth")
 	value2 := myType("Bhargavi")
 
@@ -49,7 +48,6 @@ func main() {
 	fmt.Println(variable1)
 	fmt.Printf("%T\n", variable1)
 	// variable1.sayHello()
-
 
 	var l Location
 	l.name = "India"

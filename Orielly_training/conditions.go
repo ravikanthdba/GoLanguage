@@ -10,7 +10,7 @@ func main() {
 	fmt.Scanf("%d", &number)
 	if (number % 4) == 0 {
 		fmt.Println("Linkedin")
-	} else if (number % 4 == 1) {
+	} else if number%4 == 1 {
 		fmt.Println("Linked")
 	} else {
 		fmt.Println("In")

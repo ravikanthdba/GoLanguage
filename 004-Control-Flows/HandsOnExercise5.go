@@ -2,13 +2,12 @@
 
 package main
 
-
 import (
 	"fmt"
 )
 
 func main() {
-	for number := 10; number <= 100; number ++ {
-		fmt.Printf("The number %d when divided by 4 is : %d\n", number, (number % 4));
+	for number := 10; number <= 100; number++ {
+		fmt.Printf("The number %d when divided by 4 is : %d\n", number, (number % 4))
 	}
 }

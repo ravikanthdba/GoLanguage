@@ -16,11 +16,10 @@ import (
 
 func main() {
 
-	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51};
-	y := []int{};
+	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
+	y := []int{}
 
-
-	y = append(y, x[0:3]...);
-	y = append(y, x[6:]...);
-	fmt.Println(y);
+	y = append(y, x[0:3]...)
+	y = append(y, x[6:]...)
+	fmt.Println(y)
 }

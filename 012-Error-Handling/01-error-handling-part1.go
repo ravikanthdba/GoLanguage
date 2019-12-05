@@ -5,9 +5,9 @@ import (
 )
 
 func main() {
-	str, err := fmt.Println("Hello");
+	str, err := fmt.Println("Hello")
 	if err != nil {
-		fmt.Println(err);
+		fmt.Println(err)
 	}
-	fmt.Println(str);
+	fmt.Println(str)
 }

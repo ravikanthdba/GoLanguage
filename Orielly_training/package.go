@@ -9,6 +9,6 @@ import (
 func main() {
 	greeting.Hello("Ravikanth")
 	greeting.Hi()
-    hindi.Namaste("Ravikanth")
+	hindi.Namaste("Ravikanth")
 	telugu.Namaskaram("Ravikanth")
 }

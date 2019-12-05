@@ -6,23 +6,20 @@ import (
 	"fmt"
 )
 
-
 func main() {
 
-	var birthyear int;
-	fmt.Println("Enter the year of birth: ");
-	fmt.Scanf("%d", &birthyear);
-
+	var birthyear int
+	fmt.Println("Enter the year of birth: ")
+	fmt.Scanf("%d", &birthyear)
 
 	fmt.Println("The following are the years you are alive:")
 	for {
 
 		if birthyear > 2019 {
-			break;
+			break
 		}
 
-
-		fmt.Println(birthyear);
-		birthyear ++;
+		fmt.Println(birthyear)
+		birthyear++
 	}
 }

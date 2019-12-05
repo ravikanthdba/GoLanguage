@@ -1,6 +1,6 @@
 /*
 
-Use var to DECLARE three VARIABLES. The variables should have package level scope. Do not assign VALUES to the variables. 
+Use var to DECLARE three VARIABLES. The variables should have package level scope. Do not assign VALUES to the variables.
 Use the following IDENTIFIERS for the variables and make sure the variables are of the following TYPE (meaning they can store VALUES of that TYPE).
 identifier “x” type int
 identifier “y” type string
@@ -12,16 +12,15 @@ The compiler assigned values to the variables. What are these values called?
 
 */
 
-
 package main
+
 import "fmt"
 
-var x int;
-var y string;
-var z bool;
-
+var x int
+var y string
+var z bool
 
 func main() {
-	fmt.Printf("The values of x: %d, y: %s, z: %t\n\n", x, y, z);
-	fmt.Println("The compiler assigned values for the above variables are called: Zero Variables");
+	fmt.Printf("The values of x: %d, y: %s, z: %t\n\n", x, y, z)
+	fmt.Println("The compiler assigned values for the above variables are called: Zero Variables")
 }

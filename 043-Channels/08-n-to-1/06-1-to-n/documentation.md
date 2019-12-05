@@ -1,0 +1,1 @@
+This code has 1 go routine putting data onto the channel and multiple goroutines pulling data off the channel

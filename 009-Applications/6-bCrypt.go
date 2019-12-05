@@ -11,22 +11,21 @@ import (
 
 func main() {
 	password := `passworrd12345`
-	fmt.Println("The password is : ", password);
-	bs, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.MinCost);
+	fmt.Println("The password is : ", password)
+	bs, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.MinCost)
 	if err != nil {
 		fmt.Println("Error while generating the hashed function of the password")
 	}
 	fmt.Println("The hashed password is :", bs)
 	fmt.Printf("The hashed password is :%s\n", bs)
 
-	
-	loginPassword  := `password12345`;
+	loginPassword := `password12345`
 
-	errorMessage := bcrypt.CompareHashAndPassword(bs, []byte(loginPassword));
+	errorMessage := bcrypt.CompareHashAndPassword(bs, []byte(loginPassword))
 	if errorMessage != nil {
-		fmt.Println("Incorrect credentials for login");
-		return;
+		fmt.Println("Incorrect credentials for login")
+		return
 	}
-    fmt.Println("Login Success!!")
+	fmt.Println("Login Success!!")
 
 }

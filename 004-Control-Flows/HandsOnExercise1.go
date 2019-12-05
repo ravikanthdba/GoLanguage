@@ -6,29 +6,24 @@ import (
 	"fmt"
 )
 
-
 func main() {
 
 	fmt.Println("Option 1:")
 
-	for i := 0; i <= 10000; i ++ {
-		fmt.Println(i);
+	for i := 0; i <= 10000; i++ {
+		fmt.Println(i)
 	}
-
 
 	fmt.Println("Option 2:")
 
-	var x int32;
+	var x int32
 	for {
 		if x > 10000 {
-			break;
+			break
 		}
 
-		fmt.Println(x);
-		x ++;
+		fmt.Println(x)
+		x++
 	}
 
 }
-
-
-

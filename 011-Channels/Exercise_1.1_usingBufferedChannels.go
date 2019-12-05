@@ -1,11 +1,11 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
-    c := make(chan int, 1);
-    c <- 32;
-    fmt.Println(<- c);
+	c := make(chan int, 1)
+	c <- 32
+	fmt.Println(<-c)
 }

@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 	"io/ioutil"
+	"net/http"
 	"time"
 )
 
@@ -21,8 +21,8 @@ func main() {
 	go responseSize("http://example.com/", channel)
 	go responseSize("https://tour.golang.org/", channel)
 	go responseSize("https://play.golang.org/", channel)
-	fmt.Println(<- channel)
-	fmt.Println(<- channel)
+	fmt.Println(<-channel)
+	fmt.Println(<-channel)
 	fmt.Println(time.Since(start))
 
 	//Exercise - https://play.golang.org/p/-42igvcEcEI

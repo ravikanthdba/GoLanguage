@@ -10,38 +10,37 @@ import (
 	"fmt"
 )
 
-const pi = 3.14157;
+const pi = 3.14157
 
 type circle struct {
-	radius float32;
+	radius float32
 }
 
 func (c circle) area() float32 {
-	fmt.Println("The value of c is ", c);
-	fmt.Println("The address of c is ", &c);
-	return pi * c.radius * c.radius;
+	fmt.Println("The value of c is ", c)
+	fmt.Println("The address of c is ", &c)
+	return pi * c.radius * c.radius
 }
 
 type shape interface {
-	area() float32;
+	area() float32
 }
 
 func info(s shape) {
-	fmt.Println("The value of s is ", s);
-	fmt.Println("The address of s is ", &s);
-	fmt.Println("The area is ", s.area());
+	fmt.Println("The value of s is ", s)
+	fmt.Println("The address of s is ", &s)
+	fmt.Println("The area is ", s.area())
 }
-
 
 func main() {
 
-	c1 := circle {
+	c1 := circle{
 		radius: 10,
 	}
 
-    fmt.Println("The value of c1 is ", c1);
-    fmt.Println("The address of c1 is ", &c1);
+	fmt.Println("The value of c1 is ", c1)
+	fmt.Println("The address of c1 is ", &c1)
 
-	info(&c1);
+	info(&c1)
 
 }

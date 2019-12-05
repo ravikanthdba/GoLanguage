@@ -8,6 +8,6 @@ import (
 
 func main() {
 	if true {
-		fmt.Printf("This step is being printed since true \n");
+		fmt.Printf("This step is being printed since true \n")
 	}
 }

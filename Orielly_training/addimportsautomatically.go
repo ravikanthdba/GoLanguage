@@ -8,6 +8,6 @@ import (
 )
 
 func main() {
-	fmt.Println(strings.Title("ravikanth"));
-	fmt.Println(math.Ceil(3.14145));
+	fmt.Println(strings.Title("ravikanth"))
+	fmt.Println(math.Ceil(3.14145))
 }

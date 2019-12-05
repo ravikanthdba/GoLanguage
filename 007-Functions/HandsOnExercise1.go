@@ -18,20 +18,19 @@ import (
 
 func main() {
 
-	n1 := foo();
-	n2, n3 := bar();
+	n1 := foo()
+	n2, n3 := bar()
 
-	fmt.Println(n1);
-	fmt.Println(n2);
-	fmt.Println(n3);
+	fmt.Println(n1)
+	fmt.Println(n2)
+	fmt.Println(n3)
 
 }
 
-
 func foo() int {
-	return 42;
+	return 42
 }
 
 func bar() (int, string) {
-	return 45, "Ravikanth";
+	return 45, "Ravikanth"
 }

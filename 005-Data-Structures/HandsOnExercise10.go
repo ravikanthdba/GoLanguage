@@ -11,25 +11,22 @@ import (
 	"fmt"
 )
 
-
 func main() {
-	m := map[string] [3]string {
-		`bond_james`: {`Shaken, not stirred`, `Martinis`, `Women`},
+	m := map[string][3]string{
+		`bond_james`:      {`Shaken, not stirred`, `Martinis`, `Women`},
 		`moneypenny_miss`: {`James Bond`, `Literature`, `Computer Science`},
-		`no_dr`: {`Being evil`, `Ice cream`, `Sunsets`},
-		`ravikanth`: {`Watching movies`, `programming`, `reading`},
+		`no_dr`:           {`Being evil`, `Ice cream`, `Sunsets`},
+		`ravikanth`:       {`Watching movies`, `programming`, `reading`},
 	}
-
 
 	// Delete a record
 
-	delete(m, `no_dr`);
+	delete(m, `no_dr`)
 
-
-	fmt.Printf("%s           -  %s\n", "name", "favourite");
+	fmt.Printf("%s           -  %s\n", "name", "favourite")
 	for mapkeys := range m {
-		for favourite := 0; favourite < len(m[mapkeys]); favourite ++ {
-			fmt.Printf("%s           -  %s\n", mapkeys, m[mapkeys][favourite]);
+		for favourite := 0; favourite < len(m[mapkeys]); favourite++ {
+			fmt.Printf("%s           -  %s\n", mapkeys, m[mapkeys][favourite])
 		}
 	}
 }

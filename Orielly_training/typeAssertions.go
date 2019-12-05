@@ -20,7 +20,7 @@ func (t TapePlayer) stop() {
 	fmt.Println("Stopped")
 }
 
-func (t TapeRecorder)  start (song string) {
+func (t TapeRecorder) start(song string) {
 	fmt.Println("Playing song: ", song)
 }
 
