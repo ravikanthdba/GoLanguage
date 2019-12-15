@@ -10,17 +10,20 @@ func main() {
 
 	c0 := fact(in)
 	c1 := fact(in)
-	//c2 := fact(in)
-	//c3 := fact(in)
-	//c4 := fact(in)
-	//c5 := fact(in)
-	//c6 := fact(in)
-	//c7 := fact(in)
-	//c8 := fact(in)
-	//c9 := fact(in)
+	c2 := fact(in)
+	c3 := fact(in)
+	c4 := fact(in)
+	c5 := fact(in)
+	c6 := fact(in)
+	c7 := fact(in)
+	c8 := fact(in)
+	c9 := fact(in)
 
-	for value := range merge(c0, c1) {
-		fmt.Println(value)
+
+	var y int
+	for value := range merge(c0, c1, c2, c3, c4, c5, c6, c7, c8, c9) {
+		y ++
+		fmt.Println(y, "\t", value)
 	}
 
 }
@@ -29,8 +32,8 @@ func gen() chan int {
 	out := make(chan int)
 
 	go func() {
-		for i := 0; i < 10; i ++ {
-			for j := 1; j <= 2; j ++ {
+		for i := 0; i < 100000; i ++ {
+			for j := 1; j <= 10; j ++ {
 				out <- j
 			}
 		}
@@ -41,15 +44,11 @@ func gen() chan int {
 }
 
 func fact(c chan int) chan int {
-	var fact int = 1
 	out := make(chan int)
 
 	go func() {
-		for value := range c {
-			for i := 1; i <= value; i ++ {
-				fact *= i
-			}
-			out <- fact
+		for data := range c {
+			out <- factorial(data)
 		}
 		close(out)
 	}()
@@ -70,12 +69,23 @@ func merge(n ...chan int) chan int {
 			}
 			wg.Done()
 		}(value)
+	}
 
 		go func() {
 			wg.Wait()
 			close(out)
 		}()
-	}
+
 
 	return out
+}
+
+func factorial(n int) int {
+	var fact int = 1
+
+	for i := 1; i <= n; i ++ {
+		fact *= i
+	}
+
+	return fact
 }
