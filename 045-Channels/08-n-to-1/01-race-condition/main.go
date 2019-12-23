@@ -13,7 +13,7 @@ func main() {
 	go func() {
 		fmt.Println("Launching subroutine1")
 		wg.Add(1)
-		for i := 0; i < 20; i ++ {
+		for i := 0; i < 20; i++ {
 			fmt.Printf("Adding %d to the channel c by subprocess1\n", i)
 			c <- i
 		}
@@ -24,7 +24,7 @@ func main() {
 	go func() {
 		fmt.Println("Launching subroutine2")
 		wg.Add(1)
-		for i := 100; i < 200; i ++ {
+		for i := 100; i < 200; i++ {
 			fmt.Printf("Adding %d to the channel c by subprocess2\n", i)
 			c <- i
 		}

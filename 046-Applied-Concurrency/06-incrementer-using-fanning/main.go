@@ -10,26 +10,22 @@ func main() {
 	chan2 := make(chan int)
 	fan_in_channel := make(chan int)
 
-
 	go send(chan1, chan2)
 	go receive(chan1, chan2, fan_in_channel)
-
-
 
 	for value := range fan_in_channel {
 		fmt.Println(value)
 	}
 }
 
-
 func send(chan1, chan2 chan int) {
-		for i := 0; i < 2000; i ++ {
-			if i % 2 == 0 {
-				chan1 <- 1
-			} else {
-				chan2 <- 1
-			}
+	for i := 0; i < 2000; i++ {
+		if i%2 == 0 {
+			chan1 <- 1
+		} else {
+			chan2 <- 1
 		}
+	}
 
 	close(chan1)
 	close(chan2)

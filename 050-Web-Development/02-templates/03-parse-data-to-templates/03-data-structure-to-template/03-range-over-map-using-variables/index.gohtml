@@ -1,0 +1,18 @@
+<html>
+  <title></title>
+  <body>
+    <p> Passing map example </p>
+    {{ range $key, $value := .}}
+      <ul>
+        <li>
+          {{ $key }}
+          {{ range $item := $value }}
+            <ul>
+            <li> {{ $item }} </li>
+            </ul>
+          {{ end }}
+        </li>
+      </ul>
+    {{ end }}
+  </body>
+</html>

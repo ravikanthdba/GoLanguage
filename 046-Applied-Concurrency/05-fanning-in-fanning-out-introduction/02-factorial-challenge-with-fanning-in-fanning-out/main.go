@@ -10,7 +10,6 @@ func main() {
 	even_numbers := make(chan int)
 	fan_in_factorial := make(chan int)
 
-
 	go getData(odd_numbers, even_numbers)
 	go runFactorial(odd_numbers, even_numbers, fan_in_factorial)
 
@@ -21,7 +20,7 @@ func main() {
 
 func getData(odd_numbers, even_numbers chan int) {
 	for i := 1; i < 20; i++ {
-		if i % 2 == 0{
+		if i%2 == 0 {
 			odd_numbers <- i
 		} else {
 			even_numbers <- i
@@ -44,7 +43,6 @@ func runFactorial(odd_numbers, even_numbers, fan_in_factorial chan int) {
 		wg.Done()
 	}()
 
-
 	go func() {
 		for value := range even_numbers {
 			fan_in_factorial <- fact(value)
@@ -59,7 +57,7 @@ func runFactorial(odd_numbers, even_numbers, fan_in_factorial chan int) {
 func fact(n int) int {
 	var fact int = 1
 
-	for i := 1; i <= n; i ++ {
+	for i := 1; i <= n; i++ {
 		fact *= i
 	}
 

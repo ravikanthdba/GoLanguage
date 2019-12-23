@@ -1,8 +1,4 @@
-/*
-
-   Convert a Json to slice of bytes
-
-*/
+/* Convert a Json to slice of bytes */
 
 package main
 

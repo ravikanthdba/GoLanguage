@@ -13,14 +13,13 @@ func main() {
 
 	go func() {
 		fmt.Println("Subroutine 1 launched to put data onto the channel")
-		for i := 0; i < 100; i ++ {
+		for i := 0; i < 100; i++ {
 			fmt.Printf("Added %d to the channel\n", i)
 			c <- i
 		}
 		fmt.Println("Closing the channel")
 		close(c)
 	}()
-
 
 	go func() {
 		var subroutine2 []int
@@ -44,6 +43,6 @@ func main() {
 		fmt.Println("Values from subroutine3", subroutine3)
 	}()
 
-	<- done
-	<- done
+	<-done
+	<-done
 }

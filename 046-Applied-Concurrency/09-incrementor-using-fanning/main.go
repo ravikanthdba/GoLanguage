@@ -32,7 +32,7 @@ func gen() chan int {
 	out := make(chan int)
 
 	go func() {
-		for i := 0; i < 10000; i ++ {
+		for i := 0; i < 10000; i++ {
 			for j := 0; j < 1000; j++ {
 				out <- 1
 			}

@@ -21,14 +21,13 @@ func main() {
 func gen(n ...int) chan int {
 	out := make(chan int)
 	go func() {
-		for  value := range n {
+		for value := range n {
 			out <- n[value]
 		}
 		close(out)
 	}()
 	return out
 }
-
 
 func sq(c chan int) chan int {
 	out := make(chan int)
@@ -54,7 +53,6 @@ func merge(cs ...chan int) chan int {
 			wg.Done()
 		}(c)
 	}
-
 
 	go func() {
 		wg.Wait()

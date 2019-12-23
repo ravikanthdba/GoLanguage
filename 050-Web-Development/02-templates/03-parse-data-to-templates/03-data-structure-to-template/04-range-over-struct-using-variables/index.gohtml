@@ -1,0 +1,11 @@
+<html>
+<title></title>
+<body>
+  <p> This is an example for struct data type passing </p>
+  <ul>
+  {{ range $key,$value := . }}
+    <li> {{$key}} - {{$value.Name}} - {{$value.Age}} </li>
+  {{ end }}
+  </ul>
+</body>
+</html>

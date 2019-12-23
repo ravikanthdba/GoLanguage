@@ -38,7 +38,6 @@ func main() {
 	}
 	defer file.Close()
 
-
 	input := bufio.NewScanner(file)
 	for input.Scan() {
 		value, err := strconv.Atoi(input.Text())

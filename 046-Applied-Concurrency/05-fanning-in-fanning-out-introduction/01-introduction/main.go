@@ -22,9 +22,9 @@ func main() {
 
 func send(odd_channel, even_channel chan int) {
 	fmt.Println("Launched Subprocess for send")
-	for i := 0; i <= 1000; i ++ {
+	for i := 0; i <= 1000; i++ {
 		fmt.Println("sending value i to the channel:", i)
-		if i % 2 != 0 {
+		if i%2 != 0 {
 			odd_channel <- i
 		} else {
 			even_channel <- i
@@ -33,7 +33,6 @@ func send(odd_channel, even_channel chan int) {
 	close(odd_channel)
 	close(even_channel)
 }
-
 
 func receive(odd_channel, even_channel, fan_int_channel chan int) {
 	fmt.Println("Launched Subprocess for receive")
@@ -48,7 +47,6 @@ func receive(odd_channel, even_channel, fan_int_channel chan int) {
 		}
 		wg.Done()
 	}()
-
 
 	go func() {
 		for value := range even_channel {

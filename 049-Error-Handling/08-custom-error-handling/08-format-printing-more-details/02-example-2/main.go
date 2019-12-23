@@ -28,7 +28,7 @@ func main() {
 
 type mathError struct {
 	function string
-	err error
+	err      error
 }
 
 func (d *mathError) Error() string {
@@ -44,7 +44,6 @@ func division(a, b float64) (float64, error) {
 	}
 	return (a / b), nil
 }
-
 
 func sqrt(n float64) (float64, error) {
 	if n < 0 {

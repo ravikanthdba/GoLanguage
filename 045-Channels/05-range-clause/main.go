@@ -8,7 +8,7 @@ func main() {
 	c := make(chan int)
 
 	go func() {
-		for i := 0; i < 20; i ++ {
+		for i := 0; i < 20; i++ {
 			fmt.Printf("value %d has been put on the channel\n", i)
 			c <- i
 		}

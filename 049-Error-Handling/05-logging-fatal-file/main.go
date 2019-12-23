@@ -16,9 +16,8 @@ func main() {
 	fmt.Println("Setting output file as : ", file)
 	log.SetOutput(file)
 
-
-	 _, errorLog := os.Open("input.txt")
-	 if errorLog != nil {
-	 	log.Fatal("Error in opening the file", errorLog)
-	 }
+	_, errorLog := os.Open("input.txt")
+	if errorLog != nil {
+		log.Fatal("Error in opening the file", errorLog)
+	}
 }

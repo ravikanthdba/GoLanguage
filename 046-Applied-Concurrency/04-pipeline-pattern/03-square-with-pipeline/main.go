@@ -22,7 +22,6 @@ func sendData(n ...int) chan int {
 	return out
 }
 
-
 func sq(c chan int) chan int {
 	out := make(chan int)
 	go func() {

@@ -18,8 +18,8 @@ func gen() chan int64 {
 	var j int64
 
 	go func() {
-		for i := 0; i < 10; i ++ {
-			for j = 6; j < 160; j ++ {
+		for i := 0; i < 10; i++ {
+			for j = 6; j < 160; j++ {
 				out <- j
 			}
 		}
@@ -28,7 +28,6 @@ func gen() chan int64 {
 
 	return out
 }
-
 
 func factorial(c chan int64) chan int64 {
 	out := make(chan int64)
@@ -45,7 +44,7 @@ func factorial(c chan int64) chan int64 {
 
 func fact(n int64) int64 {
 	var fact int64 = 1
-	for i := n; i > 0; i -- {
+	for i := n; i > 0; i-- {
 		fact *= i
 	}
 	return fact

@@ -14,10 +14,10 @@ func main() {
 	fmt.Printf("Channel c created with %d address\n", c)
 	fmt.Printf("Channel done created with %d address\n", done)
 
-	for i := 0; i < n ; i++ {
+	for i := 0; i < n; i++ {
 		fmt.Println("Launching the subprocess:", i)
 		go func() {
-			for j := 0; j < 10; j ++ {
+			for j := 0; j < 10; j++ {
 				fmt.Printf("Adding the value %d to the channel\n", j)
 				c <- j
 			}
@@ -27,9 +27,9 @@ func main() {
 	}
 
 	go func() {
-		for i := 0; i < 10; i ++ {
+		for i := 0; i < 10; i++ {
 			fmt.Printf("Clearing the subprocess: %d\n", i)
-			<- done
+			<-done
 		}
 		close(c)
 	}()

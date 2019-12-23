@@ -10,18 +10,18 @@ func main() {
 	}
 }
 
-func sendData(n int) <- chan int {
+func sendData(n int) <-chan int {
 	out := make(chan int)
-		go func() {
-			for i := 1; i <= n; i++ {
-				out <- i
-			}
-			close(out)
-		}()
+	go func() {
+		for i := 1; i <= n; i++ {
+			out <- i
+		}
+		close(out)
+	}()
 	return out
 }
 
-func factorial(c <- chan int) <- chan int {
+func factorial(c <-chan int) <-chan int {
 	out := make(chan int)
 
 	var factorial int = 1

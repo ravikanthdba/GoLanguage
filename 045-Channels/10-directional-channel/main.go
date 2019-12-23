@@ -18,10 +18,10 @@ func main() {
 	}
 }
 
-func incrementer() <- chan int {
+func incrementer() <-chan int {
 	out := make(chan int)
 	go func() {
-		for i := 0; i < 10; i ++ {
+		for i := 0; i < 10; i++ {
 			out <- i
 		}
 		close(out)
@@ -29,7 +29,7 @@ func incrementer() <- chan int {
 	return out
 }
 
-func puller(c <- chan int) <- chan int {
+func puller(c <-chan int) <-chan int {
 	out := make(chan int)
 	go func() {
 		var sum int

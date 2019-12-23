@@ -1,6 +1,6 @@
 /*
-	 TODO: give "D. Buggs" full gear
- */
+ TODO: give "D. Buggs" full gear
+*/
 
 /*
 	Algorithm:
@@ -12,7 +12,7 @@
 		6) For the key name: D. buggs, set the gear to full
 		7) append the new key-value for D. buggs to the new slice
 		8) re-assign new slice data to the original slice
- */
+*/
 
 package main
 
@@ -23,7 +23,6 @@ func main() {
 	agents = append(agents, Agent{name: "D. Buggs", gear: "none"})
 	agents = append(agents, Agent{name: "X. Itwon", gear: "full"})
 	agents = append(agents, Agent{name: "D. Fercloze", gear: "full"})
-
 
 	// TODO: give "D. Buggs" full gear
 	// NOTE: Output is validated, so don't use extra print statements

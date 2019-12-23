@@ -33,7 +33,7 @@ func gen() chan int {
 
 	go func() {
 		for i := 1; i <= 100; i++ {
-			for j := 1; j <= 10; j ++ {
+			for j := 1; j <= 10; j++ {
 				out <- j
 			}
 		}
@@ -63,14 +63,14 @@ func merge(n ...chan int) chan int {
 	var wg sync.WaitGroup
 	wg.Add(len(n))
 
-		for _, value := range n {
-			go func(number chan int) {
-				for value := range number {
-					out <- value
-				}
-				wg.Done()
-			}(value)
-		}
+	for _, value := range n {
+		go func(number chan int) {
+			for value := range number {
+				out <- value
+			}
+			wg.Done()
+		}(value)
+	}
 
 	go func() {
 		wg.Wait()

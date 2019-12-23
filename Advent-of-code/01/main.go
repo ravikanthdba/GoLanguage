@@ -20,7 +20,6 @@ func totalFuel(fuel []int) int {
 	return sum
 }
 
-
 func main() {
 	var array []int
 

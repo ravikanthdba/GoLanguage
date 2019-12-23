@@ -13,7 +13,7 @@ func main() {
 		fmt.Println("File doesn't exist: ", err)
 	}
 
-	for i := 0; i < 5; i ++ {
+	for i := 0; i < 5; i++ {
 		fmt.Println(i)
 	}
 }

@@ -23,7 +23,7 @@ func incrementer() chan int {
 	fmt.Println("channel created in incrementer")
 	go func() {
 		fmt.Println("Started subprocess 1 for incrementer")
-		for i := 0; i < 10; i ++ {
+		for i := 0; i < 10; i++ {
 			fmt.Printf("passing %d to the channel\n", i)
 			out <- i
 		}

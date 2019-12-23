@@ -11,5 +11,5 @@ func main() {
 	}()
 	fmt.Println("WAiting to receive baton")
 	fmt.Println("received baton")
-	fmt.Println(<- c)
+	fmt.Println(<-c)
 }

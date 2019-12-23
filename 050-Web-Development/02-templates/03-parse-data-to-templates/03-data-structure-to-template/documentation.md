@@ -1,0 +1,1 @@
+- passing aggregate data structures like: map, array / slice and struct to the template

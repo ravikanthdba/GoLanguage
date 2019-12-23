@@ -1,8 +1,8 @@
 package _1_example_1
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 	"log"
 	"math"
 )
@@ -25,15 +25,11 @@ func sqrt(n float64) (float64, error) {
 	return math.Sqrt(n), nil
 }
 
-
 type norgateMathError struct {
 	Latitude, Longitude string
-	err error
+	err                 error
 }
 
 func (n *norgateMathError) Error() string {
 	return fmt.Sprintf("Error returned with Latitude: %s, Longitude: %s and message: %v\n", n.Latitude, n.Longitude, n.err)
 }
-
-
-

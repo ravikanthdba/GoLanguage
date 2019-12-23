@@ -8,8 +8,8 @@ import (
 func main() {
 	c := make(chan int)
 
-	fmt.Println("The value of c is : ", c);
-	fmt.Printf("The format of c is %T\n", c);
+	fmt.Println("The value of c is : ", c)
+	fmt.Printf("The format of c is %T\n", c)
 
 	go func() {
 		for i := 0; i < 20; i++ {

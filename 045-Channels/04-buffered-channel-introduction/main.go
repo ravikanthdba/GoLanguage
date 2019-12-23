@@ -16,7 +16,7 @@ func main() {
 }
 
 func send(s chan int) {
-	for i := 0; i < 100; i ++ {
+	for i := 0; i < 100; i++ {
 		fmt.Println("The value sent is: ", i)
 		fmt.Printf("Sending %v to the channel\n", s)
 		s <- i
@@ -25,7 +25,7 @@ func send(s chan int) {
 
 func receive(r chan int) {
 	for {
-		fmt.Println("The value received is: ", <- r)
+		fmt.Println("The value received is: ", <-r)
 		fmt.Printf("Receiving %v from the channel\n", r)
 	}
 }

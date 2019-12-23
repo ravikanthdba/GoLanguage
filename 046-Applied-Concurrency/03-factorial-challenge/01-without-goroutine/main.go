@@ -12,7 +12,7 @@ func main() {
 func factorial(n int) int {
 	var fact int = 1
 
-	for i := 1; i <= n; i ++ {
+	for i := 1; i <= n; i++ {
 		fact *= i
 	}
 
