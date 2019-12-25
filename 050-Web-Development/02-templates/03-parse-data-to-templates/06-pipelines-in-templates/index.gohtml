@@ -1,0 +1,21 @@
+<html>
+<title></title>
+<body>
+<p> This is an example for pipeline with templates </p>
+<div>
+Original Value: {{.}}
+</div>
+<div>
+Number Doubled: {{. | double}}
+</div>
+<div>
+Number Squared: {{. | square}}
+</div>
+<div>
+Number Square Rooted: {{. | sqroot}}
+</div>
+<div>
+All operations together: {{. | double | square | sqroot}}
+</div>
+</body>
+</html>

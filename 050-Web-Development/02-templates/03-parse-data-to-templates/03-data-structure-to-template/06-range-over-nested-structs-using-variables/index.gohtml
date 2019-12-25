@@ -1,0 +1,23 @@
+<html>
+<title> </title>
+<body>
+  <p> This is an example for range over nested structs using variables </p>
+  <ul>
+  {{ range $key, $value := . }}
+    <p> Customer ID: {{$key}} </p>
+    <p> Customer Name: {{$value.Customer.Name}} </p>
+    <br>
+    <ul>
+    {{range $id, $item := $value.GroceriesList}}
+      <li> {{$id}} - {{$item.Item}} - {{$item.Quantity}} - {{$item.Price}}</li>
+    {{ end }}
+    </ul>
+    <br>
+    <p> Total Price : {{$value.TotalPrice}}  </p>
+
+    <hr>
+    <br>
+  {{ end }}
+  </ul>
+</body>
+</html>

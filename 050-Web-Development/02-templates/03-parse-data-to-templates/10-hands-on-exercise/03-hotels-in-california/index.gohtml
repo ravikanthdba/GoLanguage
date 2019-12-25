@@ -1,0 +1,29 @@
+<html>
+<title></title>
+<body>
+<ul>
+{{ range $key, $value := . }}
+  <li> {{$key}} - {{$value.Region}} </li>
+  {{ range $value.Hotels }}
+    <div>
+    Name: {{.Name}}
+    </div>
+    <div>
+    Address: {{.Address}}
+    </div>
+    <div>
+    City: {{.City}}
+    </div>
+    <div>
+    Zip: {{.Zip}}
+    </div>
+    <div>
+    Region: {{.Region}}
+    </div>
+    <br>
+  {{ end }}
+  <hr>
+{{ end }}
+</ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<title>Restaurant Example</title>
+<body>
+  {{ range $key,$value := . }}
+    <p> ID: {{$key}} </p>
+    <p> Hotel : {{$value.HotelName}} </p>
+      <p> Breakfast Menu: </p>
+      <ul>
+      {{ range $value.BreakfastMenu }}
+        <li>
+        {{.Name}} - {{.Style}} - {{.Price}}
+        </li>
+      {{ end }}
+      </ul>
+
+
+
+      <p> Lunch Menu: </p>
+      <ul>
+      {{ range $value.LunchMenu }}
+        <li>
+        {{.Name}} - {{.Style}} - {{.Price}}
+        </li>
+      {{ end }}
+      </ul>
+
+
+
+
+      <p> Dinner Menu: </p>
+      <ul>
+      {{ range $value.DinnerMenu }}
+        <li>
+        {{.Name}} - {{.Style}} - {{.Price}}
+        </li>
+      {{ end }}
+      </ul>
+
+  <hr>
+  {{ end }}
+</body>
+</html>

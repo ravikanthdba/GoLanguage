@@ -1,0 +1,11 @@
+<html>
+<title></title>
+<body>
+<p>This is an example of ranging over slice of structs </p>
+<ul>
+  {{ range $key, $value := . }}
+    <li> {{$key}} - {{$value.Item}} - {{$value.Price}} </li>
+  {{ end }}
+</ul>
+</body>
+</html>

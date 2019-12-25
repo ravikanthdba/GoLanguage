@@ -1,0 +1,11 @@
+<html>
+<title></title>
+<body>
+  <p> This is an example for passing function into the template </p>
+  <ul>
+  {{ range $key, $value := . }}
+    <li> {{$value.Fname}} - {{$value.Lname}} -  {{firstThreeCharacters $value.Fname }} -  {{upperCase $value.Fname }} - {{getLDAP $value.FullnameForLDAP }}</li>
+  {{ end }}
+  </ul>
+</body>
+</html>
