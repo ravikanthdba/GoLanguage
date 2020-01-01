@@ -32,7 +32,7 @@ func init() {
 }
 
 func main() {
-	var number float64 = 10;
+	var number float64 = 10
 
 	newFile, err := os.Create("index.html")
 	if err != nil {

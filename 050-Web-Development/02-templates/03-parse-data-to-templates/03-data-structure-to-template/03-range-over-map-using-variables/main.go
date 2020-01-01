@@ -14,8 +14,8 @@ func init() {
 
 func main() {
 	var grocieriesList = map[string][]string{"Vegetables": []string{"Brinjal", "Carrot", "Potato"},
-											 "Fruits": []string{"Tomato", "Pomegranete", "Apple", "Pineapple"},
-								}
+		"Fruits": []string{"Tomato", "Pomegranete", "Apple", "Pineapple"},
+	}
 	newFile, err := os.Create("index.html")
 	if err != nil {
 		log.Fatalln("The output file cannot be created, exiting")

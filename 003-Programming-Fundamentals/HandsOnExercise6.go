@@ -6,9 +6,8 @@ import (
 	"fmt"
 )
 
-
 const (
-	_ = iota
+	_      = iota
 	year_0 = 2013
 	year_1 = 2013 + iota
 	year_2 = 2013 + iota
@@ -16,8 +15,8 @@ const (
 )
 
 func main() {
-	fmt.Println("Year_0 is ", year_0);
-	fmt.Println("Year_1 is ", year_1);
-	fmt.Println("Year_2 is ", year_2);
-	fmt.Println("Year_3 is ", year_3);
+	fmt.Println("Year_0 is ", year_0)
+	fmt.Println("Year_1 is ", year_1)
+	fmt.Println("Year_2 is ", year_2)
+	fmt.Println("Year_3 is ", year_3)
 }

@@ -23,7 +23,6 @@ func main() {
 		Lname: "Garimella",
 	}
 
-
 	var err = t.Execute(os.Stdout, p1)
 	if err != nil {
 		log.Fatalln("Unable to execute the template")

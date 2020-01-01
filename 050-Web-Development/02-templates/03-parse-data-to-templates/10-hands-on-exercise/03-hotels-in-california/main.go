@@ -9,11 +9,11 @@ import (
 var t *template.Template
 
 type hotel struct {
-	Name string
+	Name    string
 	Address string
-	City string
-	Zip int
-	Region string
+	City    string
+	Zip     int
+	Region  string
 }
 
 type region struct {
@@ -32,32 +32,32 @@ func main() {
 		Region: "Northern",
 		Hotels: []hotel{
 			{
-				Name: "Hotel Taj Krishna",
+				Name:    "Hotel Taj Krishna",
 				Address: "12345 Baker Street",
-				City: "California",
-				Zip: 12345,
-				Region: "Northern California",
+				City:    "California",
+				Zip:     12345,
+				Region:  "Northern California",
 			},
 			{
-				Name: "Hotel Taj Banjara",
+				Name:    "Hotel Taj Banjara",
 				Address: "321 John's Street",
-				City: "California",
-				Zip: 12345,
-				Region: "Northern California",
+				City:    "California",
+				Zip:     12345,
+				Region:  "Northern California",
 			},
 			{
-				Name: "Hotel Taj Falaknuma",
+				Name:    "Hotel Taj Falaknuma",
 				Address: "112 Indian Street",
-				City: "California",
-				Zip: 12345,
-				Region: "Northern California",
+				City:    "California",
+				Zip:     12345,
+				Region:  "Northern California",
 			},
 			{
-				Name: "Hotel Taj Krishna",
+				Name:    "Hotel Taj Krishna",
 				Address: "11 Pakistan Street",
-				City: "California",
-				Zip: 12345,
-				Region: "Northern California",
+				City:    "California",
+				Zip:     12345,
+				Region:  "Northern California",
 			},
 		},
 	}
@@ -66,38 +66,38 @@ func main() {
 		Region: "Southern",
 		Hotels: []hotel{
 			{
-				Name: "California Motel",
+				Name:    "California Motel",
 				Address: "321 Mark's Road",
-				City: "California",
-				Zip: 12348,
-				Region: "Southern California",
+				City:    "California",
+				Zip:     12348,
+				Region:  "Southern California",
 			},
 			{
-				Name: "Hello World",
+				Name:    "Hello World",
 				Address: "111 Frankenstein's Road",
-				City: "California",
-				Zip: 12348,
-				Region: "Southern California",
+				City:    "California",
+				Zip:     12348,
+				Region:  "Southern California",
 			},
 			{
-				Name: "Come Again!!",
+				Name:    "Come Again!!",
 				Address: "1 Worldwide Road",
-				City: "California",
-				Zip: 12348,
-				Region: "Southern California",
+				City:    "California",
+				Zip:     12348,
+				Region:  "Southern California",
 			},
 		},
 	}
 
 	r3 := region{
 		Region: "Central",
-		Hotels:[]hotel{
+		Hotels: []hotel{
 			{
-				Name: "Hotel Linkedin",
+				Name:    "Hotel Linkedin",
 				Address: "321 Adam's Street",
-				City: "California",
-				Zip: 12345,
-				Region: "Central California",
+				City:    "California",
+				Zip:     12345,
+				Region:  "Central California",
 			},
 		},
 	}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<title> Internals of Requests </title>
+  <p> This is an Example on Internals of Requests </p>
+  <body>
+  <h3> Method Info </h3>
+  <p> The method is: {{ .Method }} </p>
+
+  <hr>
+
+  <h3> URL Info </h3>
+  <p> The method is: {{ .Url }} </p>
+  <hr>
+
+  <h3> Header Info </h3>
+  {{ if .Header }}
+    <ul>
+    {{range $key,$value := .Header }}
+        <li> {{ $key }} </li>
+        <ul>
+        {{ range $detail := $value }}
+          <li> {{ $detail }}</li>
+        {{ end }}
+        </ul>
+    {{ end }}
+    </ul>
+  {{ end }}
+
+  <hr>
+
+  <h3> Data Info </h3>
+  {{ if .Submissions }}
+    {{ range $key, $value := .Submissions }}
+      {{ if eq $key "fname" }}
+          <p> The names List is: </p>
+          <ul>
+          {{ range $detail := $value }}
+            <li> {{ $detail }} </li>
+          {{ end }}
+          </ul>
+      {{ else }}
+          <p> The Submit button is: </p>
+          <ul>
+          {{ range $detail := $value }}
+            <li> {{ $detail }} </li>
+          {{ end }}
+          </ul>
+      {{ end }}
+    {{ end }}
+  {{ else }}
+  <form action="/" method="post">
+    <input type="text" name="Name" />
+    <input type="submit" name="submit" />
+  </form>
+  {{ end }}
+  <hr>
+  </body>
+</html>

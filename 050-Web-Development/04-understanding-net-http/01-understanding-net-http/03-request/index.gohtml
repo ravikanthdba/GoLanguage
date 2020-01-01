@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <title> Input Type Submit </title>
+  <body>
+    <ul>
+    {{ if . }}
+      {{ range $key,$value := . }}
+          {{ if eq $key "fname"}}
+              <p> Names List is: </p>
+              {{ range $detail := $value }}
+                <li> {{$detail}} </li>
+              {{ end }}
+          {{ else }}
+              <p> Submit button is: </p>
+              {{ range $detail := $value }}
+                  <li> {{$detail}} </li>
+              {{ end }}
+          {{ end }}
+      {{ end }}
+    </ul>
+
+    {{ else }}
+
+    <form action="/" method="POST">
+      First Name: <input type="text" name="fname">
+      <input type="submit" name="Submit">
+    </form>
+
+    {{ end }}
+  </body>
+</html>

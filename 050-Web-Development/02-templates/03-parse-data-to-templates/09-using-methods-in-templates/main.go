@@ -10,7 +10,7 @@ var t *template.Template
 
 type person struct {
 	Name string
-	Age int
+	Age  int
 }
 
 func (p person) AgeDbl() int {
@@ -29,7 +29,7 @@ func main() {
 
 	p1 := person{
 		Name: "Ravikanth",
-		Age: 32,
+		Age:  32,
 	}
 
 	newFile, err := os.Create("index.html")

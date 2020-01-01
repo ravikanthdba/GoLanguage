@@ -8,13 +8,12 @@ import (
 
 var t *template.Template
 
-
 func init() {
 	t = template.Must(template.ParseFiles("index.gohtml"))
 }
 
 type groceries struct {
-	Item string
+	Item  string
 	Price float64
 }
 
@@ -35,7 +34,7 @@ func main() {
 		Price: 10,
 	}
 
-	items = append(items,g1, g2, g3)
+	items = append(items, g1, g2, g3)
 
 	newFile, err := os.Create("index.html")
 	if err != nil {

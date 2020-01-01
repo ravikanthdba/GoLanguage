@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+type hotdog int
+
+func (m hotdog) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Any code written")
+	fmt.Fprintln(w,"Any code can be written here..")
+}
+
+func main() {
+	var d hotdog
+	http.ListenAndServe(":8080", d)
+}

@@ -20,7 +20,6 @@ func main() {
 		log.Fatal("Unable to create the file")
 	}
 
-
 	err = t.ExecuteTemplate(newfile, "index.gohtml", groceriesList)
 	if err != nil {
 		log.Fatalln("Unable to pass data to template")

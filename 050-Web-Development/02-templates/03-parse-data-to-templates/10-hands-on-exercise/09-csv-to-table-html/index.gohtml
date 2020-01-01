@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title> This is an example for CSV to HTML tabluar format </title>
+<body>
+<p> This is an example for CSV to HTML </p>
+  <table style="width:100%">
+  <tr>
+  {{range header .}}
+    {{ $length := len . }}
+    {{ if ne $length 0 }}
+      <th> {{trimSpace .}} <th>
+    {{ end }}
+  {{ end }}
+  </tr>
+
+  {{range bodyTable .}}
+    <tr>
+    {{range .}}
+      <td> {{.}} </td>
+    {{ end }}
+    </tr>
+  {{ end }}
+  </table>
+</body>
+</html>

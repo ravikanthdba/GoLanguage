@@ -14,34 +14,34 @@ func init() {
 
 type person struct {
 	Name string
-	Age int
+	Age  int
 }
 
 func main() {
 	var people []person
 	p1 := person{
 		Name: "Ravikanth",
-		Age: 32,
+		Age:  32,
 	}
 
 	p2 := person{
 		Name: "Nagabhushanam",
-		Age: 66,
+		Age:  66,
 	}
 
 	p3 := person{
 		Name: "Swarna Latha",
-		Age: 57,
+		Age:  57,
 	}
 
 	p4 := person{
 		Name: "Bhargavi",
-		Age: 28,
+		Age:  28,
 	}
 
 	p5 := person{
 		Name: "Viraj",
-		Age: 1,
+		Age:  1,
 	}
 
 	people = append(people, p1, p2, p3, p4, p5)
@@ -50,7 +50,6 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-
 
 	err = t.ExecuteTemplate(newfile, "index.gohtml", people)
 	if err != nil {

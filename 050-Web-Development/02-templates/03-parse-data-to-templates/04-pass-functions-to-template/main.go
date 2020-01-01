@@ -10,9 +10,9 @@ import (
 var t *template.Template
 
 var functions = template.FuncMap{
-	"upperCase": strings.ToUpper,
+	"upperCase":            strings.ToUpper,
 	"firstThreeCharacters": firstThreeCharacters,
-	"getLDAP": getLDAP,
+	"getLDAP":              getLDAP,
 }
 
 func firstThreeCharacters(s string) string {
@@ -30,8 +30,8 @@ func init() {
 }
 
 type person struct {
-	Fname string
-	Lname string
+	Fname           string
+	Lname           string
 	FullnameForLDAP string
 }
 

@@ -13,7 +13,6 @@ var fm = template.FuncMap{
 	"format": timeFormatting,
 }
 
-
 func init() {
 	t = template.Must(template.New("").Funcs(fm).ParseFiles("index.gohtml"))
 }
@@ -21,7 +20,6 @@ func init() {
 func timeFormatting(t time.Time) string {
 	return t.Format("2006-01-02")
 }
-
 
 func main() {
 	newFile, err := os.Create("index.html")

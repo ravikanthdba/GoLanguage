@@ -1,0 +1,56 @@
+<html>
+<title> Internals of Request / Response Writer </title>
+<body>
+  <p> This is an example to explain Internals of Request / Response Writer </p>
+
+  <h3> Method Info </h3>
+  <p> The Method is: {{ .Method }} </p>
+  <hr>
+
+  <h3> URL Info </h3>
+  <p> The URL is: {{ .Url }} </p>
+  <hr>
+
+
+  <h3> Request Header Info </h3>
+  <ul>
+  {{ range $key,$value := .RequestHeader }}
+    <li> {{ $key }} </li>
+    <ul>
+      {{ range $detail := $value }}
+        <li> {{ $detail}} </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+  </ul>
+  <hr>
+
+
+  <h3> ContentLength Info </h3>
+  <p> The ContentLength is: {{ .ContentLength }} </p>
+  <hr>
+
+  {{ if .Submissions }}
+  The Submissions is: {{ .Submissions }}
+  {{ else }}
+    <form action="/" method="post">
+      <input type="text" name="fname">
+      <input type="button" name=""submit>
+    </form>
+  {{ end }}
+
+  <h3> Response Header Info </h3>
+  {{ if .ResponseHeader}}
+      <ul>
+      {{ range $key,$value := .ResponseHeader }}
+        <li> {{ $key }} </li>
+        <ul>
+          {{ range $detail := $value }}
+            <li> {{ $detail }} </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+      </ul>
+  {{ end }}
+</body>
+</html>
