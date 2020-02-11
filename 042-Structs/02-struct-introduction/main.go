@@ -23,3 +23,8 @@ func main() {
 	fmt.Println(p4.first, p4.last, p4.age)
 	fmt.Println(p5.first, p5.last, p5.age)
 }
+
+type Hello struct {
+	World string
+	Name string
+}
