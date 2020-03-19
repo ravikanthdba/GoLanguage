@@ -16,7 +16,7 @@ type student struct {
 var t *template.Template
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 type data struct {
@@ -52,7 +52,7 @@ func (s student) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("%T\n", d.ResponseHeader)
 	fmt.Println(d.ResponseHeader)
 
-	err = t.ExecuteTemplate(w, "index.gohtml", d)
+	err = t.ExecuteTemplate(w, "foo.gohtml", d)
 	if err != nil {
 		log.Fatalln("Unable to execute the template", err)
 	}

@@ -14,7 +14,7 @@ type student struct {
 var t *template.Template
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 func (s student) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -23,7 +23,7 @@ func (s student) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		log.Fatalln("Error in parsing the form")
 	}
 
-	err = t.ExecuteTemplate(w, "index.gohtml", r.Form)
+	err = t.ExecuteTemplate(w, "foo.gohtml", r.Form)
 }
 
 func main() {

@@ -9,7 +9,7 @@ import (
 var t *template.Template
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 type groceries struct {
@@ -41,7 +41,7 @@ func main() {
 		log.Fatalln("Error creating new file")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", items)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", items)
 	if err != nil {
 		log.Fatalln("Error executing template")
 	}

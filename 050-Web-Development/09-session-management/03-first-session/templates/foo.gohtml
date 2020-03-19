@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p> This is a Foo file </p>
+{{ if .Firstname }}
+  <hr />
+  <p> FirstName: {{.Firstname }} </p>
+  <p> LastName: {{.Lastname }} </p>
+  <p> Age: {{.Username }} </p>
+{{ else }}
+  <form method="post" action="/foo">
+    <label> First Name:
+      <input type="text" name="FirstName" />
+    </label>
+    <label> Last Name:
+      <input type="text" name="LastName" />
+    </label>
+    <label> Age:
+      <input type="text" name="Username" />
+    </label>
+    <input type="submit" name="submit" />
+  </form>
+{{ end }}
+
+<p> Please click <a href="/bar">here</a> to go to bar Menu</p>
+
+</body>
+</html>

@@ -34,7 +34,7 @@ type menu struct {
 }
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 func main() {
@@ -147,7 +147,7 @@ func main() {
 		log.Fatalln("Unable to create the file")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", menuList)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", menuList)
 	if err != nil {
 		log.Fatalln("Unable to execute template")
 	}

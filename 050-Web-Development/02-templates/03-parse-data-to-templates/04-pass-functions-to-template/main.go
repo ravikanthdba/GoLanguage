@@ -26,7 +26,7 @@ func getLDAP(s string) string {
 }
 
 func init() {
-	t = template.Must(template.New("").Funcs(functions).ParseFiles("index.gohtml"))
+	t = template.Must(template.New("").Funcs(functions).ParseFiles("foo.gohtml"))
 }
 
 type person struct {
@@ -69,5 +69,5 @@ func main() {
 		log.Fatalln("New file hasn't been created..")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", people)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", people)
 }

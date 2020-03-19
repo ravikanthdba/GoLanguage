@@ -12,7 +12,7 @@ func init() {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	t.ExecuteTemplate(w, "index.gohtml", nil)
+	t.ExecuteTemplate(w, "foo.gohtml", nil)
 }
 
 func me(w http.ResponseWriter, r *http.Request) {

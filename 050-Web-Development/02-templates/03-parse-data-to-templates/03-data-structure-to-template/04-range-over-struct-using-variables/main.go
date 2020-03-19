@@ -9,7 +9,7 @@ import (
 var t *template.Template
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 type person struct {
@@ -51,7 +51,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	err = t.ExecuteTemplate(newfile, "index.gohtml", people)
+	err = t.ExecuteTemplate(newfile, "foo.gohtml", people)
 	if err != nil {
 		log.Fatalln(err)
 	}

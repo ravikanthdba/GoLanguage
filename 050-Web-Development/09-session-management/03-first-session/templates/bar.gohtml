@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head> </head>
+<body>
+  <p> This is a Bar file </p>
+
+  {{ if .Firstname }}
+    <hr />
+        <p> Welcome to the Bar {{ .Firstname}}!!!</p>
+        <p> Your Last Name is: {{ .Lastname }} </p>
+        <p> Your User Name is: {{ .Username }} </p>
+  {{ end }}
+</body>
+</html>

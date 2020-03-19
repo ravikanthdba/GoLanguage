@@ -20,7 +20,7 @@ func evenNumber(n int) bool {
 }
 
 func init() {
-	t = template.Must(template.New(" ").Funcs(fm).ParseFiles("index.gohtml"))
+	t = template.Must(template.New(" ").Funcs(fm).ParseFiles("foo.gohtml"))
 }
 
 type person struct {
@@ -58,7 +58,7 @@ func main() {
 		log.Fatalln("Unable to create the file")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", people)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", people)
 	if err != nil {
 		log.Fatalln("Unable to execute the template..")
 	}

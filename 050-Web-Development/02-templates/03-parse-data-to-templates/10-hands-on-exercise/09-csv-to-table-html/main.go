@@ -32,7 +32,7 @@ func trimSpace(s string) string {
 }
 
 func init() {
-	t = template.Must(template.New(" ").Funcs(fm).ParseFiles("index.gohtml"))
+	t = template.Must(template.New(" ").Funcs(fm).ParseFiles("foo.gohtml"))
 }
 
 func main() {
@@ -53,7 +53,7 @@ func main() {
 		log.Fatalln("Unable to create a file:", err)
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", record)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", record)
 	if err != nil {
 		log.Fatalln("Unable to execute the template:", err)
 	}

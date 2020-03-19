@@ -9,7 +9,7 @@ import (
 var t *template.Template
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 		log.Fatalln("The output file cannot be created, exiting")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", grocieriesList)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", grocieriesList)
 	if err != nil {
 		log.Fatalln("Cannot pass variables to the template")
 	}

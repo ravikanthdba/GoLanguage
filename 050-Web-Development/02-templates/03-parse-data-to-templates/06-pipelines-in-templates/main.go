@@ -28,7 +28,7 @@ func sqroot(n float64) float64 {
 }
 
 func init() {
-	t = template.Must(template.New("").Funcs(functions).ParseFiles("index.gohtml"))
+	t = template.Must(template.New("").Funcs(functions).ParseFiles("foo.gohtml"))
 }
 
 func main() {
@@ -39,7 +39,7 @@ func main() {
 		log.Fatalln("Error creating the file..")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", number)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", number)
 	if err != nil {
 		log.Fatalln("Unable to write data to the template")
 	}

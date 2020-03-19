@@ -22,7 +22,7 @@ type region struct {
 }
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 func main() {
@@ -108,7 +108,7 @@ func main() {
 		log.Fatalln("Unable to create the file.")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", regionList)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", regionList)
 	if err != nil {
 		log.Fatalln("Unable to execute template")
 	}

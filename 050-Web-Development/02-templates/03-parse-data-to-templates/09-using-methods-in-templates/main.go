@@ -22,7 +22,7 @@ func (p person) TakeArgs(x int) int {
 }
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 func main() {
@@ -37,7 +37,7 @@ func main() {
 		log.Fatalln("Error in creating the file")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", p1)
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", p1)
 	if err != nil {
 		log.Fatalln("Error in executing the template")
 	}

@@ -36,7 +36,7 @@ func (i *ItemCustomer) totalBill() float64 {
 }
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 func main() {
@@ -121,7 +121,7 @@ func main() {
 		log.Fatalln("Unable to create the file, please recheck... exiting..")
 	}
 
-	err = t.ExecuteTemplate(newfile, "index.gohtml", CustomerList)
+	err = t.ExecuteTemplate(newfile, "foo.gohtml", CustomerList)
 	if err != nil {
 		log.Fatalln("Unable to write data to template")
 	}

@@ -26,7 +26,7 @@ func main() {
 }
 
 func index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	err := t.ExecuteTemplate(w, "index.gohtml", nil)
+	err := t.ExecuteTemplate(w, "foo.gohtml", nil)
 	HandleError(w, err)
 }
 

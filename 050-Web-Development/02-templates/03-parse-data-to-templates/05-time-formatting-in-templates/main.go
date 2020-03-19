@@ -14,7 +14,7 @@ var fm = template.FuncMap{
 }
 
 func init() {
-	t = template.Must(template.New("").Funcs(fm).ParseFiles("index.gohtml"))
+	t = template.Must(template.New("").Funcs(fm).ParseFiles("foo.gohtml"))
 }
 
 func timeFormatting(t time.Time) string {
@@ -27,7 +27,7 @@ func main() {
 		log.Fatalln("Error in creation of the file, failing..")
 	}
 
-	err = t.ExecuteTemplate(newFile, "index.gohtml", time.Now())
+	err = t.ExecuteTemplate(newFile, "foo.gohtml", time.Now())
 	if err != nil {
 		log.Fatalln("Error in writing data to the template")
 	}

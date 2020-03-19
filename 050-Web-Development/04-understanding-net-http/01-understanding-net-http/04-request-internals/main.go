@@ -22,7 +22,7 @@ type data struct {
 var t *template.Template
 
 func init() {
-	t = template.Must(template.ParseFiles("index.gohtml"))
+	t = template.Must(template.ParseFiles("foo.gohtml"))
 }
 
 func (s student) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -38,7 +38,7 @@ func (s student) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		Header: r.Header,
 	}
 
-	err = t.ExecuteTemplate(w, "index.gohtml", d)
+	err = t.ExecuteTemplate(w, "foo.gohtml", d)
 	if err != nil {
 		log.Fatalln("Unable to Execute the template", err)
 	}

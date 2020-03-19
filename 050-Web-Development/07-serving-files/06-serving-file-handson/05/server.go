@@ -29,7 +29,7 @@ func about(w http.ResponseWriter, r *http.Request) {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	t.ExecuteTemplate(w, "index.gohtml", "Index Method")
+	t.ExecuteTemplate(w, "foo.gohtml", "Index Method")
 }
 
 func apply(w http.ResponseWriter, r *http.Request) {
