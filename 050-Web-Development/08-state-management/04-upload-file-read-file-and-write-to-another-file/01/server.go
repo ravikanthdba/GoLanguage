@@ -1,4 +1,4 @@
-package _1
+package main
 
 import (
 	"fmt"
@@ -30,7 +30,6 @@ func fileHandle(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-
 		err = ioutil.WriteFile("target/destination.txt", content, 777)
 		if err != nil {
 			http.Error(w, "Error in writing to new file", 500)
@@ -45,5 +44,5 @@ func fileHandle(w http.ResponseWriter, r *http.Request) {
 	<input type="file" name="fileName" >
 	<input type="submit" >
 	</form>
-	` + s)
+	`+s)
 }

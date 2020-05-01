@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body>
+<h2> Employee Database </h2>
+{{ range $key, $value := .}}
+<form method="post" action="/updateData?id={{$value.Empid}}">
+  <label> Employee name: <input type="text" name="empname" value="{{$value.Empname}}" /> </label>
+  <label> Age: <input type="text" name="age" value="{{$value.Age}}" /> </label>
+  <label> Posting: <input type="text" name="posting" value="{{$value.Posting}}" /> </label>
+  <label> Salary: <input type="text" name="salary" value="{{$value.Salary}}" /> </label>
+  <label> Gender: <input type="text" name="gender" value="{{$value.Sex}}" /> </label>
+  <button type="submit"> Save </button>
+</form>
+{{ end }}
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+Username: <input type="text" name="username" />
+<script>
+  username = document.querySelector("input");
+  username.addEventListener('input', function() {
+    console.log(username.value);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/validateUser", true);
+    xhr.addEventListener("readystatechange", function() {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        var item = xhr.responseText;
+         if (Boolean(item) == true) {
+           text = "Username is taken, please retry";
+         } else {
+           text = "Username is not taken";
+         }
+         console.log(text);
+      }
+    });
+
+    xhr.send(username.value)
+  });
+
+</script>
+</body>
+</html>

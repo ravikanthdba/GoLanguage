@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package _1_output_to_stdout
+=======
+package main
+>>>>>>> Web Dev in Go
 
 import "fmt"
 

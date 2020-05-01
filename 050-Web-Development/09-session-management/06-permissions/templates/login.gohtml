@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+<p> This is from vm02 machine </p>
+{{ if .Firstname }}
+  <p> Welcome {{ .Firstname }} {{ .Lastname }} </p>
+  <p>
+    Firstname: {{ .Firstname }}
+    Lastname: {{ .Lastname }}
+    Username: {{ .Username }}
+    Role: {{ .Role }}
+    {{ if eq .Role  "Admin" }}
+      <p> Click <a href="/admin"> here </a> to view the admin page </p>
+    {{ end }}
+    <p> Click <a href="/logout">here</a> to logout </p>
+  </p>
+{{ else }}
+<form action="/login" method="post">
+  <label>
+    Username: <input type="text" name="username" />
+  </label>
+  <label>
+    Password: <input type="password" name="password" />
+  </label>
+  <input type="submit" value="submit" />
+</form>
+{{ end }}
+</body>
+</html>

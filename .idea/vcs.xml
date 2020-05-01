@@ -16,5 +16,9 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+<<<<<<< HEAD
+=======
+    <mapping directory="$PROJECT_DIR$/src/gopkg.in/mgo.v2" vcs="Git" />
+>>>>>>> Web Dev in Go
   </component>
 </project>

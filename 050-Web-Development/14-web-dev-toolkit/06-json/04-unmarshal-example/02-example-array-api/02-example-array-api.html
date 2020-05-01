@@ -1,0 +1,50 @@
+<html>
+<head></head>
+<body>
+<script>
+  var objectArray = [
+    {
+      "Firstname": "Ravikanth",
+      "LastName": "Garimella",
+      "Age": 32,
+      "isLinkedin": true
+    },
+    {
+      "Firstname": "Nagabhushanam",
+      "LastName": "Garimella",
+      "Age": 64,
+      "isLinkedin": false
+    },
+    {
+      "Firstname": "Swarna Latha",
+      "LastName": "Garimella",
+      "Age": 59,
+      "isLinkedin": false
+    }
+  ]
+
+  document.write(objectArray[0].Firstname)
+  document.write("<br>")
+  document.write(objectArray[0].LastName)
+  document.write("<br>")
+  document.write(objectArray[0].Age)
+  document.write("<br>")
+  document.write(objectArray[0].isLinkedin)
+
+
+  document.write("<br>")
+  document.write("<br>")
+  document.write("<br>")
+  document.write("<br>")
+
+
+  for (i = 0; i < objectArray.length; i ++) {
+    document.write(objectArray[i].Firstname)
+    document.write(" ")
+    document.write(objectArray[i].Age)
+    document.write(" ")
+    document.write("<br>")
+  }
+</script>
+</body>
+</html>

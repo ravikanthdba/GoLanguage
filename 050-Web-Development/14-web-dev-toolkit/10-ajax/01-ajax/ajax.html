@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<body>
+
+<h1> Hello World </h1>
+
+<script>
+
+  document.querySelector("h1").onclick = test;
+
+
+  function test() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "test.html", true);
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.Done && xhr.status === 200) {
+        alert(xhr.responseText);
+      }
+    };
+
+    xhr.send()
+  }
+
+</script>
+</body>
+</html>

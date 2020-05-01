@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<body>
+<button> Click Me </button>
+<script>
+document.querySelector("button").onclick = runMethod;
+
+function runMethod() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/getUser", true);
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+      alert(xhr.responseText)
+    }
+  };
+
+  xhr.send();
+}
+</script>
+</body>
+</html>

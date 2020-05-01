@@ -1,0 +1,15 @@
+<html>
+<head></head>
+<body>
+{{ range . }}
+    <div>
+     <img src="/pics/{{.}}" width="400">
+      <p> {{.}} </p>
+    </div>
+{{ end }}
+<form method="post" enctype="multipart/form-data">
+  <input type="file" name="filename">
+  <input type="submit">
+</form>
+</body>
+</html>

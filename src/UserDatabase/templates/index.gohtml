@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+<button id="addUser">    Add User </button>
+<button id="deleteUser"> Delete User </button>
+{{/*<button id="updateUser"> Update User </button>*/}}
+{{/*<button id="listUser">   List User </button>*/}}
+<script>
+document.querySelector("#addUser").onclick = addUser;
+// document.querySelector("#deleteUser").onclick = deleteUser;
+// document.querySelector("#updateUser").onclick = updateUser;
+// document.querySelector("#listUser").onclick = listUser;
+
+
+function addUser() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/createUser", true)
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+      var b = document.querySelector("body");
+      var headingOne = document.createElement("h1");
+      var headingOneText = document.createTextNode(xhr.responseText);
+      headingOne.appendChild(headingOneText);
+      b.appendChild(headingOne)
+    }
+  };
+
+  xhr.send();
+}
+
+
+function deleteUser() {
+  var xhr = new XMLHttpRequest()
+  xhr.open("POST", "/deleteUser", true)
+}
+
+</script>
+</body>
+</html>
