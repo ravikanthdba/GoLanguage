@@ -1,6 +1,0 @@
-<configuration>
-    <property>
-        <name>dfs.datanode.dir</name>
-        <value>/grid/1/dfs/data,/grid/2/dfs/data,/grid/3/dfs/data,/grid/4/dfs/data</value>
-    </property>
-</configuration>
