@@ -27,19 +27,38 @@ var addCmd = &cobra.Command{
 	Short: "Adding all numbers in the list",
 	Long: `This command adds all the numbers in the list`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("The sum of the arguments: ", args, " is: ", add(args))
+		flagStatus, _ := cmd.Flags().GetBool("float")
+		if flagStatus {
+			fmt.Println("The sum of the arguments: ", args, " is: ", addFloat(args))
+		} else {
+			fmt.Println("The sum of the arguments: ", args, " is: ", addInt(args))
+		}
 	},
 }
 
-func add(args []string) float64 {
-	var sum float64
+func addInt(args []string) int {
+	var sum int
 	for _, value := range args {
-		floatValue, err := strconv.ParseFloat(value, 64)
+		floatValue, err := strconv.Atoi(value)
 		if err != nil {
 			fmt.Println(err)
 		}
 		sum += floatValue
 	}
+	return sum
+}
+
+func addFloat(args []string) float64 {
+	var sum float64
+	for _, value := range args {
+		number, err := strconv.ParseFloat(value, 64)
+		if err != nil {
+			fmt.Println(err)
+		}
+
+		sum += number
+	}
+
 	return sum
 }
 
@@ -55,4 +74,5 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// addCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	addCmd.Flags().BoolP("float", "f", false, "Adds float numbers")
 }
