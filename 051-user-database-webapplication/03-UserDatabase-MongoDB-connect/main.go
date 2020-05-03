@@ -1,14 +1,15 @@
 package main
 
 import (
-	"UserDatabase-MongoDB-connect/controllers"
-	"gopkg.in/mgo.v2"
 	"log"
 	"net/http"
+
+	"github.com/ravikanthdba/GoLanguage/051-user-database-webapplication/03-UserDatabase-MongoDB-connect/controllers"
+	"gopkg.in/mgo.v2"
 )
 
 func main() {
-	uc := controllers.NewController(getMongoSession());
+	uc := controllers.NewController(getMongoSession())
 	http.HandleFunc("/createUser", uc.CreateUser)
 	http.HandleFunc("/retrieveUser", uc.RetrieveUser)
 	http.HandleFunc("/retrieveUserById", uc.RetrieveUserById)

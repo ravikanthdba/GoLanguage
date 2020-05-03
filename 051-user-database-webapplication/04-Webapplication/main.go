@@ -3,9 +3,10 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"Webapplication/models"
 	"html/template"
 	"net/http"
+
+	"github.com/ravikanthdba/GoLanguage/051-user-database-webapplication/04-Webapplication/models"
 )
 
 var t *template.Template
@@ -27,9 +28,9 @@ func index(w http.ResponseWriter, r *http.Request) {
 func getUser(w http.ResponseWriter, r *http.Request) {
 	u := models.User{
 		Firstname: "Ravikanth",
-		Lastname: "Garimella",
-		Age: 32,
-		Sex: "Male",
+		Lastname:  "Garimella",
+		Age:       32,
+		Sex:       "Male",
 	}
 
 	jsonData, err := json.Marshal(u)
@@ -39,5 +40,5 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "%s\n",jsonData)
+	fmt.Fprintf(w, "%s\n", jsonData)
 }

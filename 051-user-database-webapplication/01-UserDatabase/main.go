@@ -1,13 +1,14 @@
 package main
 
 import (
-	"UserDatabase/models"
 	"encoding/json"
 	"fmt"
 	"html/template"
 	"log"
 	"net/http"
 	"strconv"
+
+	"github.com/ravikanthdba/GoLanguage/051-user-database-webapplication/01-UserDatabase/models"
 )
 
 var t *template.Template
@@ -53,13 +54,13 @@ func retrieveUser(w http.ResponseWriter, r *http.Request) {
 			}
 			w.Header().Set("Content-Type", "application/json")
 			w.WriteHeader(http.StatusOK)
-			fmt.Fprintf(w,"%s\n" ,jsondata)
+			fmt.Fprintf(w, "%s\n", jsondata)
 			return
 		}
 	}
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusNotFound)
-	fmt.Fprintf(w, "%s\n","No user ID exists")
+	fmt.Fprintf(w, "%s\n", "No user ID exists")
 }
 
 func updateUser(w http.ResponseWriter, r *http.Request) {
@@ -100,7 +101,7 @@ func deleteUser(w http.ResponseWriter, r *http.Request) {
 
 	var newDatabase []models.UserDB
 
-	for _,data := range usersDatabase {
+	for _, data := range usersDatabase {
 		if data.Id != idValue {
 			newDatabase = append(newDatabase, data)
 		}

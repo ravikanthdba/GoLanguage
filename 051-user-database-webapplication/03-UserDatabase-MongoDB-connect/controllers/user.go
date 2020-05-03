@@ -5,15 +5,20 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"UserDatabase-CodeOrganized/models"
 	"strconv"
+
+	"github.com/ravikanthdba/GoLanguage/051-user-database-webapplication/03-UserDatabase-MongoDB-connect/models"
+	"gopkg.in/mgo.v2"
 )
 
-type UserController struct {}
+type UserController struct {
+	session *mgo.Session
+}
+
 var userDB []models.User
 
-func NewController() *UserController {
-	return &UserController{}
+func NewController(s *mgo.Session) *UserController {
+	return &UserController{s}
 }
 
 func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request) {
@@ -64,7 +69,6 @@ func (uc UserController) RetrieveUserById(w http.ResponseWriter, r *http.Request
 	log.Println("Data Not Retrieved")
 }
 
-
 func (uc UserController) UpdateUser(w http.ResponseWriter, r *http.Request) {
 	var newData []models.User
 	id := r.URL.Query().Get("id")
@@ -100,7 +104,7 @@ func (uc UserController) DeleteUser(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var newDB []models.User
-	for _,data := range userDB {
+	for _, data := range userDB {
 		if data.Id != idValue {
 			newDB = append(newDB, data)
 		}
