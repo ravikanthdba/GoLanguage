@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/ravikanthdba/GoLanguage/051-user-database-webapplication/01-UserDatabase/models"
+	"github.com/ravikanthdba/GoLanguage/051-example-webapplication/01-UserDatabase/models"
 )
 
 var t *template.Template

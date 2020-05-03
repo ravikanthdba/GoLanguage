@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/ravikanthdba/GoLanguage/051-user-database-webapplication/02-UserDatabase-CodeOrganized/models"
+	"github.com/ravikanthdba/GoLanguage/051-example-webapplication/02-UserDatabase-CodeOrganized/models"
 )
 
 type UserController struct{}

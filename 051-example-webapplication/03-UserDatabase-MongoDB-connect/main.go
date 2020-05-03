@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ravikanthdba/GoLanguage/051-user-database-webapplication/03-UserDatabase-MongoDB-connect/controllers"
+	"github.com/ravikanthdba/GoLanguage/051-example-webapplication/03-UserDatabase-MongoDB-connect/controllers"
 	"gopkg.in/mgo.v2"
 )
 

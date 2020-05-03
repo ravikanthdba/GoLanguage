@@ -6,7 +6,7 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/ravikanthdba/GoLanguage/051-user-database-webapplication/04-Webapplication/models"
+	"github.com/ravikanthdba/GoLanguage/051-example-webapplication/04-Webapplication/models"
 )
 
 var t *template.Template
